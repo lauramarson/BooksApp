@@ -11,6 +11,7 @@ public final class FavoriteBooksQuery: GraphQLQuery {
     query FavoriteBooks {
       favoriteBooks {
         __typename
+        id
         name
         cover
         author {
@@ -60,6 +61,7 @@ public final class FavoriteBooksQuery: GraphQLQuery {
       public static var selections: [GraphQLSelection] {
         return [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
           GraphQLField("name", type: .nonNull(.scalar(String.self))),
           GraphQLField("cover", type: .nonNull(.scalar(String.self))),
           GraphQLField("author", type: .nonNull(.object(Author.selections))),
@@ -72,8 +74,8 @@ public final class FavoriteBooksQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(name: String, cover: String, author: Author) {
-        self.init(unsafeResultMap: ["__typename": "Book", "name": name, "cover": cover, "author": author.resultMap])
+      public init(id: GraphQLID, name: String, cover: String, author: Author) {
+        self.init(unsafeResultMap: ["__typename": "Book", "id": id, "name": name, "cover": cover, "author": author.resultMap])
       }
 
       public var __typename: String {
@@ -82,6 +84,15 @@ public final class FavoriteBooksQuery: GraphQLQuery {
         }
         set {
           resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var id: GraphQLID {
+        get {
+          return resultMap["id"]! as! GraphQLID
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "id")
         }
       }
 

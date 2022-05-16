@@ -14,6 +14,8 @@
 		A4033798283005F40024E6BC /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4033797283005F40024E6BC /* Network.swift */; };
 		A403379B2832A0A30024E6BC /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403379A2832A0A30024E6BC /* WebServices.swift */; };
 		A403379D2832A8960024E6BC /* BookCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403379C2832A8960024E6BC /* BookCellViewModel.swift */; };
+		A403379F2832BCD60024E6BC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403379E2832BCD60024E6BC /* DetailViewController.swift */; };
+		A40337A12832C72A0024E6BC /* DetailBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40337A02832C72A0024E6BC /* DetailBookViewModel.swift */; };
 		A4FBE5BD282D928000B21C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5BC282D928000B21C07 /* AppDelegate.swift */; };
 		A4FBE5BF282D928000B21C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5BE282D928000B21C07 /* SceneDelegate.swift */; };
 		A4FBE5C1282D928000B21C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5C0282D928000B21C07 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 		A4033797283005F40024E6BC /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		A403379A2832A0A30024E6BC /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		A403379C2832A8960024E6BC /* BookCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellViewModel.swift; sourceTree = "<group>"; };
+		A403379E2832BCD60024E6BC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A40337A02832C72A0024E6BC /* DetailBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookViewModel.swift; sourceTree = "<group>"; };
 		A4FBE5B9282D928000B21C07 /* studiosol_teste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = studiosol_teste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4FBE5BC282D928000B21C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4FBE5BE282D928000B21C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 			children = (
 				A403378E282EEB520024E6BC /* BooksCollectionViewModel.swift */,
 				A403379C2832A8960024E6BC /* BookCellViewModel.swift */,
+				A40337A02832C72A0024E6BC /* DetailBookViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			children = (
 				A4FBE5D4282EDDDA00B21C07 /* HomeViewController.swift */,
 				A403378B282EE8880024E6BC /* FirstBooksViewController.swift */,
+				A403379E2832BCD60024E6BC /* DetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -285,7 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A403379F2832BCD60024E6BC /* DetailViewController.swift in Sources */,
 				A4033798283005F40024E6BC /* Network.swift in Sources */,
+				A40337A12832C72A0024E6BC /* DetailBookViewModel.swift in Sources */,
 				A403378C282EE8880024E6BC /* FirstBooksViewController.swift in Sources */,
 				A4FBE5D5282EDDDA00B21C07 /* HomeViewController.swift in Sources */,
 				A403379B2832A0A30024E6BC /* WebServices.swift in Sources */,

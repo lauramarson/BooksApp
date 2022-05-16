@@ -134,15 +134,12 @@ extension FirstBooksViewController: UICollectionViewDelegate {
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-//        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController else { return }
-//
-//        let movie = favoritesVM.modelAt(indexPath.row)
-//        dvc.detailVM = DetailMovieViewModel(movie: movie)
-//        dvc.delegate = self
-//        dvc.fromFavoriteVC = true
-//
-//        self.present(dvc, animated: true)
+        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController else { return }
+
+        let book = booksCollectionVM.modelAt(indexPath.row)
+        dvc.detailVM = DetailBookViewModel(book: book)
+
+        navigationController?.pushViewController(dvc, animated: true)
     }
 }
 
