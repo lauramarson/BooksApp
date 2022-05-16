@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A403378C282EE8880024E6BC /* FirstBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403378B282EE8880024E6BC /* FirstBooksViewController.swift */; };
+		A403378C282EE8880024E6BC /* FavoriteBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403378B282EE8880024E6BC /* FavoriteBooksViewController.swift */; };
 		A403378F282EEB520024E6BC /* BooksCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403378E282EEB520024E6BC /* BooksCollectionViewModel.swift */; };
 		A4033792282EECE60024E6BC /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4033791282EECE60024E6BC /* BookCollectionViewCell.swift */; };
 		A40337962830055B0024E6BC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40337952830055B0024E6BC /* API.swift */; };
@@ -16,6 +16,7 @@
 		A403379D2832A8960024E6BC /* BookCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403379C2832A8960024E6BC /* BookCellViewModel.swift */; };
 		A403379F2832BCD60024E6BC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403379E2832BCD60024E6BC /* DetailViewController.swift */; };
 		A40337A12832C72A0024E6BC /* DetailBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40337A02832C72A0024E6BC /* DetailBookViewModel.swift */; };
+		A40337A52832E0120024E6BC /* BookDetails.graphql in Resources */ = {isa = PBXBuildFile; fileRef = A40337A42832E0120024E6BC /* BookDetails.graphql */; };
 		A4FBE5BD282D928000B21C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5BC282D928000B21C07 /* AppDelegate.swift */; };
 		A4FBE5BF282D928000B21C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5BE282D928000B21C07 /* SceneDelegate.swift */; };
 		A4FBE5C1282D928000B21C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5C0282D928000B21C07 /* ViewController.swift */; };
@@ -30,7 +31,7 @@
 /* Begin PBXFileReference section */
 		19E588925286C52CEAE9F164 /* Pods-studiosol_teste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studiosol_teste.release.xcconfig"; path = "Target Support Files/Pods-studiosol_teste/Pods-studiosol_teste.release.xcconfig"; sourceTree = "<group>"; };
 		755D0CD290B5C10AD6BDC56C /* Pods_studiosol_teste.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_studiosol_teste.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A403378B282EE8880024E6BC /* FirstBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstBooksViewController.swift; sourceTree = "<group>"; };
+		A403378B282EE8880024E6BC /* FavoriteBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBooksViewController.swift; sourceTree = "<group>"; };
 		A403378E282EEB520024E6BC /* BooksCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCollectionViewModel.swift; sourceTree = "<group>"; };
 		A4033791282EECE60024E6BC /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4033794283004280024E6BC /* FavoriteBooks.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = FavoriteBooks.graphql; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		A403379C2832A8960024E6BC /* BookCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellViewModel.swift; sourceTree = "<group>"; };
 		A403379E2832BCD60024E6BC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A40337A02832C72A0024E6BC /* DetailBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookViewModel.swift; sourceTree = "<group>"; };
+		A40337A42832E0120024E6BC /* BookDetails.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = BookDetails.graphql; sourceTree = "<group>"; };
 		A4FBE5B9282D928000B21C07 /* studiosol_teste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = studiosol_teste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4FBE5BC282D928000B21C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4FBE5BE282D928000B21C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				A4FBE5CD282D928200B21C07 /* Info.plist */,
 				A4FBE5C5282D928000B21C07 /* studiosol_teste.xcdatamodeld */,
 				A4033794283004280024E6BC /* FavoriteBooks.graphql */,
+				A40337A42832E0120024E6BC /* BookDetails.graphql */,
 			);
 			path = studiosol_teste;
 			sourceTree = "<group>";
@@ -135,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				A4FBE5D4282EDDDA00B21C07 /* HomeViewController.swift */,
-				A403378B282EE8880024E6BC /* FirstBooksViewController.swift */,
+				A403378B282EE8880024E6BC /* FavoriteBooksViewController.swift */,
 				A403379E2832BCD60024E6BC /* DetailViewController.swift */,
 			);
 			path = Views;
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4FBE5CC282D928200B21C07 /* LaunchScreen.storyboard in Resources */,
+				A40337A52832E0120024E6BC /* BookDetails.graphql in Resources */,
 				A4FBE5C9282D928200B21C07 /* Assets.xcassets in Resources */,
 				A4FBE5C4282D928000B21C07 /* Main.storyboard in Resources */,
 			);
@@ -294,7 +298,7 @@
 				A403379F2832BCD60024E6BC /* DetailViewController.swift in Sources */,
 				A4033798283005F40024E6BC /* Network.swift in Sources */,
 				A40337A12832C72A0024E6BC /* DetailBookViewModel.swift in Sources */,
-				A403378C282EE8880024E6BC /* FirstBooksViewController.swift in Sources */,
+				A403378C282EE8880024E6BC /* FavoriteBooksViewController.swift in Sources */,
 				A4FBE5D5282EDDDA00B21C07 /* HomeViewController.swift in Sources */,
 				A403379B2832A0A30024E6BC /* WebServices.swift in Sources */,
 				A4033792282EECE60024E6BC /* BookCollectionViewCell.swift in Sources */,

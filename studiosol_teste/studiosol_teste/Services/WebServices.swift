@@ -13,20 +13,12 @@ class WebServices {
     func loadFavoriteBooks(completion: @escaping ([FavoriteBooksQuery.Data.FavoriteBook]) -> ()) {
       Network.shared.apollo
         .fetch(query: FavoriteBooksQuery()) { result in
-        
-//        guard let self = self else {
-//          return
-//        }
-
-//        defer {
-//            self.collectionView.reloadData()
-//        }
                 
         switch result {
         case .success(let graphQLResult):
             var favoriteBooks = [FavoriteBooksQuery.Data.FavoriteBook]()
-            if let launchConnection = graphQLResult.data?.favoriteBooks {
-                favoriteBooks.append(contentsOf: launchConnection.compactMap { $0 })
+            if let fetchedBooks = graphQLResult.data?.favoriteBooks {
+                favoriteBooks.append(contentsOf: fetchedBooks.compactMap { $0 })
                 completion(favoriteBooks)
             }
                     
@@ -34,17 +26,35 @@ class WebServices {
               let message = errors
                     .map { $0.localizedDescription }
                     .joined(separator: "\n")
-//              self.showAlert(title: "GraphQL Error(s)",
-//                             message: message)
-                print("\(message)")
+                print(message)
             }
         case .failure(let error):
-          // From `UIViewController+Alert.swift`
-//          self.showAlert(title: "Network Error",
-//                         message: error.localizedDescription)
-            print("\(error.localizedDescription)")
+            print(error.localizedDescription)
         }
       }
     }
-    
+}
+
+extension WebServices {
+    func loadBookDetails(id: String, completion: @escaping (BookDetailsQuery.Data.Book) -> ()) {
+        
+      Network.shared.apollo.fetch(query: BookDetailsQuery(bookID: id)) { result in
+        
+        switch result {
+        case .failure(let error):
+            print(error.localizedDescription)
+        case .success(let graphQLResult):
+            if let book = graphQLResult.data?.book {
+                completion(book)
+          }
+        
+          if let errors = graphQLResult.errors {
+            let message = errors
+                            .map { $0.localizedDescription }
+                            .joined(separator: "\n")
+            print(message)
+          }
+        }
+      }
+    }
 }

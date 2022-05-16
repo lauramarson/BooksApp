@@ -8,24 +8,37 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var authorLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
     
     var detailVM: DetailBookViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setup()
 
-        // Do any additional setup after loading the view.
+        detailVM?.getBookDetails() { [weak self] in
+            self?.descriptionLabel.text = self?.detailVM?.description
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setup() {
+        let imageURL = detailVM?.imageURL
+        let placeholderImage = UIImage(named: "imagePlaceholder")
+        imageView.sd_setImage(with: imageURL, placeholderImage: placeholderImage)
+        
+        titleLabel.text = detailVM?.title
+        
+        authorLabel.text = detailVM?.author
+        
+        if let description = detailVM?.description {
+            descriptionLabel.text = description
+        } else {
+            descriptionLabel.text = "Carregando..."
+        }
     }
-    */
 
 }
