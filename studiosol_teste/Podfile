@@ -10,5 +10,6 @@ target 'studiosol_teste' do
   pod "Apollo"
   pod "Apollo/SQLite"
   pod "Apollo/WebSocket"
+  pod 'SDWebImage', '~> 5.0'
 
 end

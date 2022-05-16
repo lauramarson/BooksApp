@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A403378C282EE8880024E6BC /* FirstBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403378B282EE8880024E6BC /* FirstBooksViewController.swift */; };
-		A403378F282EEB520024E6BC /* FirstMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403378E282EEB520024E6BC /* FirstMoviesViewModel.swift */; };
+		A403378F282EEB520024E6BC /* BooksCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403378E282EEB520024E6BC /* BooksCollectionViewModel.swift */; };
 		A4033792282EECE60024E6BC /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4033791282EECE60024E6BC /* BookCollectionViewCell.swift */; };
 		A40337962830055B0024E6BC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40337952830055B0024E6BC /* API.swift */; };
 		A4033798283005F40024E6BC /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4033797283005F40024E6BC /* Network.swift */; };
+		A403379B2832A0A30024E6BC /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403379A2832A0A30024E6BC /* WebServices.swift */; };
+		A403379D2832A8960024E6BC /* BookCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403379C2832A8960024E6BC /* BookCellViewModel.swift */; };
 		A4FBE5BD282D928000B21C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5BC282D928000B21C07 /* AppDelegate.swift */; };
 		A4FBE5BF282D928000B21C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5BE282D928000B21C07 /* SceneDelegate.swift */; };
 		A4FBE5C1282D928000B21C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5C0282D928000B21C07 /* ViewController.swift */; };
@@ -27,11 +29,13 @@
 		19E588925286C52CEAE9F164 /* Pods-studiosol_teste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studiosol_teste.release.xcconfig"; path = "Target Support Files/Pods-studiosol_teste/Pods-studiosol_teste.release.xcconfig"; sourceTree = "<group>"; };
 		755D0CD290B5C10AD6BDC56C /* Pods_studiosol_teste.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_studiosol_teste.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A403378B282EE8880024E6BC /* FirstBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstBooksViewController.swift; sourceTree = "<group>"; };
-		A403378E282EEB520024E6BC /* FirstMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstMoviesViewModel.swift; sourceTree = "<group>"; };
+		A403378E282EEB520024E6BC /* BooksCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCollectionViewModel.swift; sourceTree = "<group>"; };
 		A4033791282EECE60024E6BC /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4033794283004280024E6BC /* FavoriteBooks.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = FavoriteBooks.graphql; sourceTree = "<group>"; };
 		A40337952830055B0024E6BC /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A4033797283005F40024E6BC /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		A403379A2832A0A30024E6BC /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		A403379C2832A8960024E6BC /* BookCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellViewModel.swift; sourceTree = "<group>"; };
 		A4FBE5B9282D928000B21C07 /* studiosol_teste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = studiosol_teste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4FBE5BC282D928000B21C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4FBE5BE282D928000B21C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +64,8 @@
 		A403378D282EEB200024E6BC /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				A403378E282EEB520024E6BC /* FirstMoviesViewModel.swift */,
+				A403378E282EEB520024E6BC /* BooksCollectionViewModel.swift */,
+				A403379C2832A8960024E6BC /* BookCellViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -71,6 +76,14 @@
 				A4033791282EECE60024E6BC /* BookCollectionViewCell.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		A40337992832A0860024E6BC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A403379A2832A0A30024E6BC /* WebServices.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		A4FBE5B0282D928000B21C07 = {
@@ -94,6 +107,7 @@
 		A4FBE5BB282D928000B21C07 /* studiosol_teste */ = {
 			isa = PBXGroup;
 			children = (
+				A40337992832A0860024E6BC /* Services */,
 				A4033797283005F40024E6BC /* Network.swift */,
 				A4033790282EECC80024E6BC /* Components */,
 				A403378D282EEB200024E6BC /* View Models */,
@@ -145,8 +159,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4FBE5D0282D928200B21C07 /* Build configuration list for PBXNativeTarget "studiosol_teste" */;
 			buildPhases = (
-				A4033793282FFF990024E6BC /* Apollo */,
 				8B1E93037F353C1B5167E6E0 /* [CP] Check Pods Manifest.lock */,
+				A4033793282FFF990024E6BC /* Apollo */,
 				A4FBE5B5282D928000B21C07 /* Sources */,
 				A4FBE5B6282D928000B21C07 /* Frameworks */,
 				A4FBE5B7282D928000B21C07 /* Resources */,
@@ -274,11 +288,13 @@
 				A4033798283005F40024E6BC /* Network.swift in Sources */,
 				A403378C282EE8880024E6BC /* FirstBooksViewController.swift in Sources */,
 				A4FBE5D5282EDDDA00B21C07 /* HomeViewController.swift in Sources */,
+				A403379B2832A0A30024E6BC /* WebServices.swift in Sources */,
 				A4033792282EECE60024E6BC /* BookCollectionViewCell.swift in Sources */,
+				A403379D2832A8960024E6BC /* BookCellViewModel.swift in Sources */,
 				A4FBE5C1282D928000B21C07 /* ViewController.swift in Sources */,
 				A4FBE5BD282D928000B21C07 /* AppDelegate.swift in Sources */,
 				A4FBE5C7282D928000B21C07 /* studiosol_teste.xcdatamodeld in Sources */,
-				A403378F282EEB520024E6BC /* FirstMoviesViewModel.swift in Sources */,
+				A403378F282EEB520024E6BC /* BooksCollectionViewModel.swift in Sources */,
 				A40337962830055B0024E6BC /* API.swift in Sources */,
 				A4FBE5BF282D928000B21C07 /* SceneDelegate.swift in Sources */,
 			);

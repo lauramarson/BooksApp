@@ -12,8 +12,23 @@ class BookCollectionViewCell: UICollectionViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
     
+    var bookCellVM: BookCellViewModel?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    func configure() {
+        guard let bookCellVM = bookCellVM else { return }
+        
+        self.titleLabel.text = bookCellVM.title
+        
+        self.authorLabel.text = bookCellVM.author
+        
+        let imageURL = bookCellVM.imageURL
+        let placeholderImage = UIImage(named: "imagePlaceholder")
+
+        imageView.sd_setImage(with: imageURL, placeholderImage: placeholderImage)
     }
     
 }
