@@ -174,15 +174,23 @@
             <objects>
                 <viewController storyboardIdentifier="Detail" id="O11-ZC-v5Q" customClass="DetailViewController" customModule="studiosol_teste" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wpu-hK-fdu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XOV-b2-p1f">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XOV-b2-p1f">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1422"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y35-Jc-R32">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1369"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y35-Jc-R32" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1422"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBe-js-dz0">
+                                                <rect key="frame" x="30" y="35" width="25" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="arrow.backward" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                                </state>
+                                            </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ng6-gE-o01">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="519"/>
                                                 <color key="backgroundColor" red="0.62745098040000002" green="0.46274509800000002" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -190,24 +198,13 @@
                                                     <constraint firstAttribute="height" constant="519" id="uud-jn-9TQ"/>
                                                 </constraints>
                                             </imageView>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0x-aA-Fkt">
-                                                <rect key="frame" x="0.0" y="369" width="414" height="1000"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0x-aA-Fkt">
+                                                <rect key="frame" x="0.0" y="519" width="414" height="903"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título do livro" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raj-DG-jXp">
-                                                        <rect key="frame" x="30" y="35" width="134" height="25"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harry Potter e a camara secreta" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raj-DG-jXp">
+                                                        <rect key="frame" x="30" y="35" width="304" height="25"/>
                                                         <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
                                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oib-21-WsH">
-                                                        <rect key="frame" x="364" y="35" width="20" height="22"/>
-                                                        <state key="normal" image="fav2"/>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94s-CX-fas">
-                                                        <rect key="frame" x="30" y="107.5" width="362.5" height="314"/>
-                                                        <mutableString key="text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</mutableString>
-                                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
-                                                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor do livro" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ie-Dr-you">
@@ -216,51 +213,57 @@
                                                         <color key="textColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94s-CX-fas">
+                                                        <rect key="frame" x="30" y="107.5" width="362.5" height="314"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" none="YES"/>
+                                                        </accessibility>
+                                                        <string key="text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</string>
+                                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
+                                                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oib-21-WsH">
+                                                        <rect key="frame" x="364" y="35" width="20" height="22"/>
+                                                        <state key="normal" image="fav2"/>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3Ie-Dr-you" secondAttribute="trailing" constant="20" symbolic="YES" id="4Fg-0Q-PfH"/>
-                                                    <constraint firstItem="raj-DG-jXp" firstAttribute="top" secondItem="h0x-aA-Fkt" secondAttribute="top" constant="35" id="BKX-Ng-9cT"/>
-                                                    <constraint firstItem="3Ie-Dr-you" firstAttribute="leading" secondItem="h0x-aA-Fkt" secondAttribute="leading" constant="30" id="ITl-zQ-n9x"/>
-                                                    <constraint firstItem="Oib-21-WsH" firstAttribute="top" secondItem="h0x-aA-Fkt" secondAttribute="top" constant="35" id="OMc-xM-hPt"/>
-                                                    <constraint firstItem="raj-DG-jXp" firstAttribute="leading" secondItem="h0x-aA-Fkt" secondAttribute="leading" constant="30" id="Xwj-5T-PCr"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="94s-CX-fas" secondAttribute="trailing" constant="20" symbolic="YES" id="aTa-LB-ReI"/>
-                                                    <constraint firstItem="94s-CX-fas" firstAttribute="top" secondItem="3Ie-Dr-you" secondAttribute="bottom" constant="20" id="avp-Jb-08v"/>
-                                                    <constraint firstItem="94s-CX-fas" firstAttribute="leading" secondItem="h0x-aA-Fkt" secondAttribute="leading" constant="30" id="blh-Qz-NS5"/>
-                                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="94s-CX-fas" secondAttribute="bottom" constant="30" id="gXn-17-wRi"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="raj-DG-jXp" secondAttribute="trailing" constant="20" symbolic="YES" id="iaZ-Tn-Rtk"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Oib-21-WsH" secondAttribute="trailing" constant="30" id="o4p-TC-k2K"/>
-                                                    <constraint firstItem="3Ie-Dr-you" firstAttribute="top" secondItem="raj-DG-jXp" secondAttribute="bottom" constant="10" id="rWx-eu-daN"/>
+                                                    <constraint firstItem="94s-CX-fas" firstAttribute="leading" secondItem="h0x-aA-Fkt" secondAttribute="leading" constant="30" id="17i-cg-cpH"/>
+                                                    <constraint firstItem="3Ie-Dr-you" firstAttribute="top" secondItem="raj-DG-jXp" secondAttribute="bottom" constant="10" id="2Cp-Bl-bfi"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="94s-CX-fas" secondAttribute="trailing" constant="20" symbolic="YES" id="3yY-qG-HER"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3Ie-Dr-you" secondAttribute="trailing" constant="20" symbolic="YES" id="62F-cv-r9i"/>
+                                                    <constraint firstItem="94s-CX-fas" firstAttribute="top" secondItem="3Ie-Dr-you" secondAttribute="bottom" constant="20" id="Czp-8q-FDt"/>
+                                                    <constraint firstItem="raj-DG-jXp" firstAttribute="top" secondItem="h0x-aA-Fkt" secondAttribute="top" constant="35" id="E8c-z6-Gfx"/>
+                                                    <constraint firstItem="Oib-21-WsH" firstAttribute="top" secondItem="raj-DG-jXp" secondAttribute="top" id="Jlu-56-jox"/>
+                                                    <constraint firstItem="raj-DG-jXp" firstAttribute="leading" secondItem="h0x-aA-Fkt" secondAttribute="leading" constant="30" id="Qy2-ON-VYZ"/>
+                                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="94s-CX-fas" secondAttribute="bottom" constant="10" id="RmB-jY-3at"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Oib-21-WsH" secondAttribute="trailing" constant="30" id="Z7p-EM-Bfq"/>
+                                                    <constraint firstItem="3Ie-Dr-you" firstAttribute="leading" secondItem="h0x-aA-Fkt" secondAttribute="leading" constant="30" id="j5c-iO-1eb"/>
+                                                    <constraint firstItem="Oib-21-WsH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="raj-DG-jXp" secondAttribute="trailing" constant="8" symbolic="YES" id="jL4-xr-BoZ"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBe-js-dz0">
-                                                <rect key="frame" x="30" y="35" width="25" height="22"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" image="arrow.backward" catalog="system">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
-                                                </state>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="h0x-aA-Fkt" firstAttribute="top" secondItem="Ng6-gE-o01" secondAttribute="bottom" constant="-150" id="0r4-IV-EDL"/>
-                                            <constraint firstItem="Ng6-gE-o01" firstAttribute="top" secondItem="y35-Jc-R32" secondAttribute="top" id="AtB-jl-bzt"/>
-                                            <constraint firstAttribute="trailing" secondItem="h0x-aA-Fkt" secondAttribute="trailing" id="PHu-CO-hl3"/>
-                                            <constraint firstItem="KBe-js-dz0" firstAttribute="top" secondItem="y35-Jc-R32" secondAttribute="top" constant="35" id="bmA-Rw-sFL"/>
-                                            <constraint firstItem="KBe-js-dz0" firstAttribute="leading" secondItem="y35-Jc-R32" secondAttribute="leading" constant="30" id="eAi-27-wS9"/>
-                                            <constraint firstAttribute="bottom" secondItem="h0x-aA-Fkt" secondAttribute="bottom" id="fHw-L7-QRR"/>
-                                            <constraint firstItem="Ng6-gE-o01" firstAttribute="leading" secondItem="y35-Jc-R32" secondAttribute="leading" id="lrp-78-0kH"/>
-                                            <constraint firstItem="h0x-aA-Fkt" firstAttribute="leading" secondItem="y35-Jc-R32" secondAttribute="leading" id="qeX-it-g13"/>
-                                            <constraint firstAttribute="trailing" secondItem="Ng6-gE-o01" secondAttribute="trailing" id="xNI-3N-eu2"/>
+                                            <constraint firstItem="Ng6-gE-o01" firstAttribute="top" secondItem="y35-Jc-R32" secondAttribute="top" id="3g7-tN-M6k"/>
+                                            <constraint firstItem="Ng6-gE-o01" firstAttribute="leading" secondItem="y35-Jc-R32" secondAttribute="leading" id="4qH-T9-EuH"/>
+                                            <constraint firstAttribute="trailing" secondItem="h0x-aA-Fkt" secondAttribute="trailing" id="Z57-3E-2OX"/>
+                                            <constraint firstItem="h0x-aA-Fkt" firstAttribute="leading" secondItem="y35-Jc-R32" secondAttribute="leading" id="gf6-ZA-Ubc"/>
+                                            <constraint firstItem="h0x-aA-Fkt" firstAttribute="top" secondItem="Ng6-gE-o01" secondAttribute="bottom" id="h52-Zb-evh"/>
+                                            <constraint firstAttribute="bottom" secondItem="h0x-aA-Fkt" secondAttribute="bottom" id="hac-TE-mWr"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ng6-gE-o01" secondAttribute="trailing" id="ixZ-uj-lTp"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="y35-Jc-R32" firstAttribute="top" secondItem="0BF-F0-tSv" secondAttribute="top" id="7rn-ky-DB9"/>
-                                    <constraint firstItem="y35-Jc-R32" firstAttribute="width" secondItem="juQ-1v-y7k" secondAttribute="width" id="OW9-Dq-Fhp"/>
-                                    <constraint firstItem="y35-Jc-R32" firstAttribute="leading" secondItem="0BF-F0-tSv" secondAttribute="leading" id="SHz-13-mex"/>
-                                    <constraint firstItem="y35-Jc-R32" firstAttribute="bottom" secondItem="0BF-F0-tSv" secondAttribute="bottom" id="h01-Lc-YTI"/>
-                                    <constraint firstItem="y35-Jc-R32" firstAttribute="trailing" secondItem="0BF-F0-tSv" secondAttribute="trailing" id="qxI-BQ-dFY"/>
+                                    <constraint firstItem="y35-Jc-R32" firstAttribute="bottom" secondItem="0BF-F0-tSv" secondAttribute="bottom" id="1VO-7B-OvL"/>
+                                    <constraint firstItem="y35-Jc-R32" firstAttribute="height" secondItem="juQ-1v-y7k" secondAttribute="height" priority="250" id="8Cv-46-kDr"/>
+                                    <constraint firstItem="y35-Jc-R32" firstAttribute="trailing" secondItem="0BF-F0-tSv" secondAttribute="trailing" id="Q8l-Vi-5Nw"/>
+                                    <constraint firstItem="y35-Jc-R32" firstAttribute="width" secondItem="juQ-1v-y7k" secondAttribute="width" id="WyB-E7-zg9"/>
+                                    <constraint firstItem="y35-Jc-R32" firstAttribute="leading" secondItem="0BF-F0-tSv" secondAttribute="leading" id="djj-zj-iqo"/>
+                                    <constraint firstItem="y35-Jc-R32" firstAttribute="top" secondItem="0BF-F0-tSv" secondAttribute="top" id="gSN-w3-dzD"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="0BF-F0-tSv"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="juQ-1v-y7k"/>
@@ -269,13 +272,14 @@
                         <viewLayoutGuide key="safeArea" id="M8p-QU-kHM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XOV-b2-p1f" firstAttribute="trailing" secondItem="M8p-QU-kHM" secondAttribute="trailing" id="14x-T8-yHH"/>
-                            <constraint firstItem="XOV-b2-p1f" firstAttribute="bottom" secondItem="M8p-QU-kHM" secondAttribute="bottom" id="3Tm-y3-O8N"/>
-                            <constraint firstItem="XOV-b2-p1f" firstAttribute="top" secondItem="M8p-QU-kHM" secondAttribute="top" id="dz8-MN-BfH"/>
-                            <constraint firstItem="XOV-b2-p1f" firstAttribute="leading" secondItem="M8p-QU-kHM" secondAttribute="leading" id="pCA-NQ-boZ"/>
+                            <constraint firstItem="XOV-b2-p1f" firstAttribute="top" secondItem="M8p-QU-kHM" secondAttribute="top" id="1JK-JL-TXU"/>
+                            <constraint firstItem="M8p-QU-kHM" firstAttribute="bottom" secondItem="XOV-b2-p1f" secondAttribute="bottom" id="ACi-de-mQl"/>
+                            <constraint firstItem="M8p-QU-kHM" firstAttribute="trailing" secondItem="XOV-b2-p1f" secondAttribute="trailing" id="N8g-9d-nhY"/>
+                            <constraint firstItem="XOV-b2-p1f" firstAttribute="leading" secondItem="M8p-QU-kHM" secondAttribute="leading" id="uWW-d8-8Ie"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="gk3-yc-9lq"/>
+                    <size key="freeformSize" width="414" height="1500"/>
                     <connections>
                         <outlet property="authorLabel" destination="3Ie-Dr-you" id="N6q-84-Fa9"/>
                         <outlet property="descriptionLabel" destination="94s-CX-fas" id="niI-7R-6f4"/>
@@ -285,7 +289,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYC-Yc-7eB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939.13043478260875" y="764.73214285714278"/>
+            <point key="canvasLocation" x="856.52173913043487" y="993.75"/>
         </scene>
         <!--First Books View Controller-->
         <scene sceneID="ooM-vx-wGj">
