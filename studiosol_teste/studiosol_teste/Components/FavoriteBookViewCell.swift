@@ -7,12 +7,12 @@
 
 import UIKit
 
-class BookCollectionViewCell: UICollectionViewCell {
+class FavoriteBookViewCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
     
-    var bookCellVM: BookCellViewModel?
+    var bookCellVM: FavoriteBookCellViewModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()

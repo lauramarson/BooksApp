@@ -8,11 +8,11 @@
 import UIKit
 import SDWebImage
 
-private let reuseIdentifier = "Book"
+private let reuseIdentifier = "FavoriteBook"
 
 class FavoriteBooksViewController: UIViewController {
     
-    var booksCollectionVM = BooksCollectionViewModel()
+    var booksCollectionVM = FavoriteBooksViewModel()
 //
 //    enum ListSection: Int, CaseIterable {
 //      case favoriteBooks
@@ -85,12 +85,12 @@ extension FavoriteBooksViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? BookCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? FavoriteBookViewCell else {
             return UICollectionViewCell()
         }
         
         let book = booksCollectionVM.modelAt(indexPath.row)
-        cell.bookCellVM = BookCellViewModel(book)
+        cell.bookCellVM = FavoriteBookCellViewModel(book)
         
         cell.configure()
 

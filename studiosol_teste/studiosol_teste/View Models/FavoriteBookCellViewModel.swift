@@ -2,15 +2,15 @@
 //  BookCellViewModel.swift
 //  studiosol_teste
 //
-//  Created by Laura Pinheiro Marson on 17/05/22.
+//  Created by Laura Pinheiro Marson on 16/05/22.
 //
 
 import Foundation
 
-class BookCellViewModel {
-    var book: AllBooksQuery.Data.AllBook
+class FavoriteBookCellViewModel {
+    var book: FavoriteBooksQuery.Data.FavoriteBook
     
-    init(_ book: AllBooksQuery.Data.AllBook) {
+    init(_ book: FavoriteBooksQuery.Data.FavoriteBook) {
         self.book = book
     }
     

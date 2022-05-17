@@ -4,6 +4,167 @@
 import Apollo
 import Foundation
 
+public final class AllBooksQuery: GraphQLQuery {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    query AllBooks {
+      allBooks {
+        __typename
+        id
+        name
+        cover
+        author {
+          __typename
+          name
+        }
+      }
+    }
+    """
+
+  public let operationName: String = "AllBooks"
+
+  public init() {
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Query"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("allBooks", type: .nonNull(.list(.nonNull(.object(AllBook.selections))))),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(allBooks: [AllBook]) {
+      self.init(unsafeResultMap: ["__typename": "Query", "allBooks": allBooks.map { (value: AllBook) -> ResultMap in value.resultMap }])
+    }
+
+    public var allBooks: [AllBook] {
+      get {
+        return (resultMap["allBooks"] as! [ResultMap]).map { (value: ResultMap) -> AllBook in AllBook(unsafeResultMap: value) }
+      }
+      set {
+        resultMap.updateValue(newValue.map { (value: AllBook) -> ResultMap in value.resultMap }, forKey: "allBooks")
+      }
+    }
+
+    public struct AllBook: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["Book"]
+
+      public static var selections: [GraphQLSelection] {
+        return [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
+          GraphQLField("name", type: .nonNull(.scalar(String.self))),
+          GraphQLField("cover", type: .nonNull(.scalar(String.self))),
+          GraphQLField("author", type: .nonNull(.object(Author.selections))),
+        ]
+      }
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(id: GraphQLID, name: String, cover: String, author: Author) {
+        self.init(unsafeResultMap: ["__typename": "Book", "id": id, "name": name, "cover": cover, "author": author.resultMap])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var id: GraphQLID {
+        get {
+          return resultMap["id"]! as! GraphQLID
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "id")
+        }
+      }
+
+      public var name: String {
+        get {
+          return resultMap["name"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "name")
+        }
+      }
+
+      public var cover: String {
+        get {
+          return resultMap["cover"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "cover")
+        }
+      }
+
+      public var author: Author {
+        get {
+          return Author(unsafeResultMap: resultMap["author"]! as! ResultMap)
+        }
+        set {
+          resultMap.updateValue(newValue.resultMap, forKey: "author")
+        }
+      }
+
+      public struct Author: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["Author"]
+
+        public static var selections: [GraphQLSelection] {
+          return [
+            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("name", type: .nonNull(.scalar(String.self))),
+          ]
+        }
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(name: String) {
+          self.init(unsafeResultMap: ["__typename": "Author", "name": name])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var name: String {
+          get {
+            return resultMap["name"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "name")
+          }
+        }
+      }
+    }
+  }
+}
+
 public final class BookDetailsQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =

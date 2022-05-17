@@ -85,3 +85,30 @@ extension WebServices {
       }
     }
 }
+
+extension WebServices {
+    
+    func loadAllBooks(completion: @escaping ([AllBooksQuery.Data.AllBook]) -> ()) {
+      Network.shared.apollo
+        .fetch(query: AllBooksQuery()) { result in
+                
+        switch result {
+        case .success(let graphQLResult):
+            var allBooks = [AllBooksQuery.Data.AllBook]()
+            if let fetchedBooks = graphQLResult.data?.allBooks {
+                allBooks.append(contentsOf: fetchedBooks.compactMap { $0 })
+                completion(allBooks)
+            }
+                    
+            if let errors = graphQLResult.errors {
+              let message = errors
+                    .map { $0.localizedDescription }
+                    .joined(separator: "\n")
+                print(message)
+            }
+        case .failure(let error):
+            print(error.localizedDescription)
+        }
+      }
+    }
+}

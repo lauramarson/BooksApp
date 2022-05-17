@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BooksCollectionViewModel {
+class FavoriteBooksViewModel {
     var webServices: WebServices
     var favoriteBooks = [FavoriteBooksQuery.Data.FavoriteBook]()
     
