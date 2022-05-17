@@ -24,6 +24,7 @@
 		A40337B228342B0A0024E6BC /* AuthorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40337B128342B090024E6BC /* AuthorCellViewModel.swift */; };
 		A40337B428342EDC0024E6BC /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40337B328342EDC0024E6BC /* CategoriesViewController.swift */; };
 		A40337B6283434C40024E6BC /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40337B5283434C40024E6BC /* CategoryCell.swift */; };
+		A40337B928344AAD0024E6BC /* storyboardSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40337B828344AAD0024E6BC /* storyboardSettings.swift */; };
 		A4FBE5BD282D928000B21C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5BC282D928000B21C07 /* AppDelegate.swift */; };
 		A4FBE5BF282D928000B21C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5BE282D928000B21C07 /* SceneDelegate.swift */; };
 		A4FBE5C1282D928000B21C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5C0282D928000B21C07 /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 		A40337B128342B090024E6BC /* AuthorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorCellViewModel.swift; sourceTree = "<group>"; };
 		A40337B328342EDC0024E6BC /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		A40337B5283434C40024E6BC /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		A40337B828344AAD0024E6BC /* storyboardSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storyboardSettings.swift; sourceTree = "<group>"; };
 		A4FBE5B9282D928000B21C07 /* studiosol_teste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = studiosol_teste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4FBE5BC282D928000B21C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4FBE5BE282D928000B21C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		A40337B728344AAD0024E6BC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A40337B828344AAD0024E6BC /* storyboardSettings.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A4FBE5B0282D928000B21C07 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +142,7 @@
 		A4FBE5BB282D928000B21C07 /* studiosol_teste */ = {
 			isa = PBXGroup;
 			children = (
+				A40337B728344AAD0024E6BC /* Extensions */,
 				A40337992832A0860024E6BC /* Services */,
 				A4033797283005F40024E6BC /* Network.swift */,
 				A4033790282EECC80024E6BC /* Components */,
@@ -321,6 +332,7 @@
 				A403379F2832BCD60024E6BC /* DetailViewController.swift in Sources */,
 				A40337AA283421540024E6BC /* FavoriteAuthorsViewController.swift in Sources */,
 				A4033798283005F40024E6BC /* Network.swift in Sources */,
+				A40337B928344AAD0024E6BC /* storyboardSettings.swift in Sources */,
 				A40337B228342B0A0024E6BC /* AuthorCellViewModel.swift in Sources */,
 				A40337A12832C72A0024E6BC /* DetailBookViewModel.swift in Sources */,
 				A403378C282EE8880024E6BC /* FavoriteBooksViewController.swift in Sources */,

@@ -10,7 +10,14 @@ import UIKit
 class CategoriesViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     
-    @IBOutlet var collectionLayout: UICollectionViewFlowLayout!
+//    @IBOutlet var collectionLayout: UICollectionViewFlowLayout! {
+//        didSet {
+//            collectionLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+//        }
+//    }
+    
+    
+    
     private let reuseIdentifier = "Category"
     
     private let categories = ["Todos", "Romance", "Aventura", "Comédia", "Terror", "Tecnologia", "Viagem"]
@@ -36,8 +43,10 @@ extension CategoriesViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
 
-        
-        cell.categoryLabel.text = categories[indexPath.row]
+        cell.categoryButton.setTitle(" \(categories[indexPath.row]) ", for: .normal)
+        cell.layer.borderWidth = CGFloat(0.5)
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        cell.layer.cornerRadius = 20.0
 
         return cell
     }
@@ -48,5 +57,15 @@ extension CategoriesViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //
+    }
+}
+
+extension CategoriesViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let item = categories[indexPath.row]
+        let itemWidth = item.size(withAttributes: [
+            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)
+        ]).width
+        return CGSize(width: itemWidth + 50, height: 43)
     }
 }
