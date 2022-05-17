@@ -12,15 +12,15 @@ class DetailViewController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var favoriteButton: UIButton!
     
     var detailVM: DetailBookViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setup()
 
         detailVM?.getBookDetails() { [weak self] in
+            self?.setup()
             self?.descriptionLabel.text = self?.detailVM?.description
         }
     }
@@ -34,10 +34,10 @@ class DetailViewController: UIViewController {
         
         authorLabel.text = detailVM?.author
         
-        if let description = detailVM?.description {
-            descriptionLabel.text = description
-        } else {
-            descriptionLabel.text = "Carregando..."
+        descriptionLabel.text = detailVM?.description
+        
+        if !detailVM!.isFavorite! {
+            favoriteButton.imageView?.image = UIImage(named: "notfav")
         }
     }
 

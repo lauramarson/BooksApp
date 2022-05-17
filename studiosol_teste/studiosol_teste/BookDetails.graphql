@@ -7,5 +7,6 @@ query BookDetails($bookID: ID!) {
       name
     }
     description
+    isFavorite
   }
 }

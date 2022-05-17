@@ -58,3 +58,30 @@ extension WebServices {
       }
     }
 }
+
+extension WebServices {
+    
+    func loadFavoriteAuthors(completion: @escaping ([FavoriteAuthorsQuery.Data.FavoriteAuthor]) -> ()) {
+      Network.shared.apollo
+        .fetch(query: FavoriteAuthorsQuery()) { result in
+                
+        switch result {
+        case .success(let graphQLResult):
+            var favoriteAuthors = [FavoriteAuthorsQuery.Data.FavoriteAuthor]()
+            if let fetchedAuthors = graphQLResult.data?.favoriteAuthors {
+                favoriteAuthors.append(contentsOf: fetchedAuthors.compactMap { $0 })
+                completion(favoriteAuthors)
+            }
+                    
+            if let errors = graphQLResult.errors {
+              let message = errors
+                    .map { $0.localizedDescription }
+                    .joined(separator: "\n")
+                print(message)
+            }
+        case .failure(let error):
+            print(error.localizedDescription)
+        }
+      }
+    }
+}

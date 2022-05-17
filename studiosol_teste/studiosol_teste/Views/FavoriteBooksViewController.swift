@@ -10,7 +10,7 @@ import SDWebImage
 
 private let reuseIdentifier = "Book"
 
-class FirstBooksViewController: UIViewController {
+class FavoriteBooksViewController: UIViewController {
     
     var booksCollectionVM = BooksCollectionViewModel()
 //
@@ -68,7 +68,7 @@ class FirstBooksViewController: UIViewController {
 
 }
 
-extension FirstBooksViewController: UICollectionViewDataSource {
+extension FavoriteBooksViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return booksCollectionVM.numberOfItems(section)
@@ -129,15 +129,15 @@ extension FirstBooksViewController: UICollectionViewDataSource {
 
 }
 
-extension FirstBooksViewController: UICollectionViewDelegate {
+extension FavoriteBooksViewController: UICollectionViewDelegate {
     
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController else { return }
 
-        let book = booksCollectionVM.modelAt(indexPath.row)
-        dvc.detailVM = DetailBookViewModel(book: book)
+        let bookID = booksCollectionVM.modelAt(indexPath.row).id
+        dvc.detailVM = DetailBookViewModel(bookID: bookID)
 
         navigationController?.pushViewController(dvc, animated: true)
     }

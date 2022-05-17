@@ -9,40 +9,44 @@ import Foundation
 
 class DetailBookViewModel {
     var webServices: WebServices
-    var favoriteBook: FavoriteBooksQuery.Data.FavoriteBook
+    var bookID: String
     
-    var bookDescription: BookDetailsQuery.Data.Book?
+    var book: BookDetailsQuery.Data.Book?
     
-    init(webServices: WebServices = WebServices(), book: FavoriteBooksQuery.Data.FavoriteBook) {
+    init(webServices: WebServices = WebServices(), bookID: String) {
         self.webServices = webServices
-        self.favoriteBook = book
+        self.bookID = bookID
     }
 }
 
 extension DetailBookViewModel {
     
-    var title: String {
-        return favoriteBook.name
+    var title: String? {
+        return book?.name
     }
     
-    var author: String {
-        return favoriteBook.author.name
+    var author: String? {
+        return book?.author.name
     }
     
-    var imageURL: URL {
-        return URL(string: favoriteBook.cover)!
+    var imageURL: URL? {
+        return URL(string: book!.cover)
     }
 
     var description: String? {
-        return bookDescription?.description
+        return book?.description
+    }
+    
+    var isFavorite: Bool? {
+        return book?.isFavorite
     }
 }
 
 extension DetailBookViewModel {
     
     func getBookDetails(completion: @escaping () -> ()) {
-        webServices.loadBookDetails(id: favoriteBook.id) { [weak self] (book) in
-            self?.bookDescription = book
+        webServices.loadBookDetails(id: bookID) { [weak self] (book) in
+            self?.book = book
             completion()
         }
     }

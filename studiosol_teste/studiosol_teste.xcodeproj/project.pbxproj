@@ -17,6 +17,13 @@
 		A403379F2832BCD60024E6BC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403379E2832BCD60024E6BC /* DetailViewController.swift */; };
 		A40337A12832C72A0024E6BC /* DetailBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40337A02832C72A0024E6BC /* DetailBookViewModel.swift */; };
 		A40337A52832E0120024E6BC /* BookDetails.graphql in Resources */ = {isa = PBXBuildFile; fileRef = A40337A42832E0120024E6BC /* BookDetails.graphql */; };
+		A40337AA283421540024E6BC /* FavoriteAuthorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40337A9283421540024E6BC /* FavoriteAuthorsViewController.swift */; };
+		A40337AC283424AB0024E6BC /* AuthorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40337AB283424AB0024E6BC /* AuthorCell.swift */; };
+		A40337AE283427650024E6BC /* FavoriteAuthorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40337AD283427650024E6BC /* FavoriteAuthorsViewModel.swift */; };
+		A40337B0283428630024E6BC /* FavoriteAuthors.graphql in Resources */ = {isa = PBXBuildFile; fileRef = A40337AF283428630024E6BC /* FavoriteAuthors.graphql */; };
+		A40337B228342B0A0024E6BC /* AuthorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40337B128342B090024E6BC /* AuthorCellViewModel.swift */; };
+		A40337B428342EDC0024E6BC /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40337B328342EDC0024E6BC /* CategoriesViewController.swift */; };
+		A40337B6283434C40024E6BC /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40337B5283434C40024E6BC /* CategoryCell.swift */; };
 		A4FBE5BD282D928000B21C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5BC282D928000B21C07 /* AppDelegate.swift */; };
 		A4FBE5BF282D928000B21C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5BE282D928000B21C07 /* SceneDelegate.swift */; };
 		A4FBE5C1282D928000B21C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5C0282D928000B21C07 /* ViewController.swift */; };
@@ -42,6 +49,13 @@
 		A403379E2832BCD60024E6BC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A40337A02832C72A0024E6BC /* DetailBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookViewModel.swift; sourceTree = "<group>"; };
 		A40337A42832E0120024E6BC /* BookDetails.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = BookDetails.graphql; sourceTree = "<group>"; };
+		A40337A9283421540024E6BC /* FavoriteAuthorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAuthorsViewController.swift; sourceTree = "<group>"; };
+		A40337AB283424AB0024E6BC /* AuthorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorCell.swift; sourceTree = "<group>"; };
+		A40337AD283427650024E6BC /* FavoriteAuthorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAuthorsViewModel.swift; sourceTree = "<group>"; };
+		A40337AF283428630024E6BC /* FavoriteAuthors.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = FavoriteAuthors.graphql; sourceTree = "<group>"; };
+		A40337B128342B090024E6BC /* AuthorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorCellViewModel.swift; sourceTree = "<group>"; };
+		A40337B328342EDC0024E6BC /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		A40337B5283434C40024E6BC /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		A4FBE5B9282D928000B21C07 /* studiosol_teste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = studiosol_teste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4FBE5BC282D928000B21C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4FBE5BE282D928000B21C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +87,8 @@
 				A403378E282EEB520024E6BC /* BooksCollectionViewModel.swift */,
 				A403379C2832A8960024E6BC /* BookCellViewModel.swift */,
 				A40337A02832C72A0024E6BC /* DetailBookViewModel.swift */,
+				A40337AD283427650024E6BC /* FavoriteAuthorsViewModel.swift */,
+				A40337B128342B090024E6BC /* AuthorCellViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -81,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				A4033791282EECE60024E6BC /* BookCollectionViewCell.swift */,
+				A40337AB283424AB0024E6BC /* AuthorCell.swift */,
+				A40337B5283434C40024E6BC /* CategoryCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -130,6 +148,7 @@
 				A4FBE5C5282D928000B21C07 /* studiosol_teste.xcdatamodeld */,
 				A4033794283004280024E6BC /* FavoriteBooks.graphql */,
 				A40337A42832E0120024E6BC /* BookDetails.graphql */,
+				A40337AF283428630024E6BC /* FavoriteAuthors.graphql */,
 			);
 			path = studiosol_teste;
 			sourceTree = "<group>";
@@ -140,6 +159,8 @@
 				A4FBE5D4282EDDDA00B21C07 /* HomeViewController.swift */,
 				A403378B282EE8880024E6BC /* FavoriteBooksViewController.swift */,
 				A403379E2832BCD60024E6BC /* DetailViewController.swift */,
+				A40337A9283421540024E6BC /* FavoriteAuthorsViewController.swift */,
+				A40337B328342EDC0024E6BC /* CategoriesViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4FBE5CC282D928200B21C07 /* LaunchScreen.storyboard in Resources */,
+				A40337B0283428630024E6BC /* FavoriteAuthors.graphql in Resources */,
 				A40337A52832E0120024E6BC /* BookDetails.graphql in Resources */,
 				A4FBE5C9282D928200B21C07 /* Assets.xcassets in Resources */,
 				A4FBE5C4282D928000B21C07 /* Main.storyboard in Resources */,
@@ -295,8 +317,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40337B428342EDC0024E6BC /* CategoriesViewController.swift in Sources */,
 				A403379F2832BCD60024E6BC /* DetailViewController.swift in Sources */,
+				A40337AA283421540024E6BC /* FavoriteAuthorsViewController.swift in Sources */,
 				A4033798283005F40024E6BC /* Network.swift in Sources */,
+				A40337B228342B0A0024E6BC /* AuthorCellViewModel.swift in Sources */,
 				A40337A12832C72A0024E6BC /* DetailBookViewModel.swift in Sources */,
 				A403378C282EE8880024E6BC /* FavoriteBooksViewController.swift in Sources */,
 				A4FBE5D5282EDDDA00B21C07 /* HomeViewController.swift in Sources */,
@@ -305,10 +330,13 @@
 				A403379D2832A8960024E6BC /* BookCellViewModel.swift in Sources */,
 				A4FBE5C1282D928000B21C07 /* ViewController.swift in Sources */,
 				A4FBE5BD282D928000B21C07 /* AppDelegate.swift in Sources */,
+				A40337AE283427650024E6BC /* FavoriteAuthorsViewModel.swift in Sources */,
 				A4FBE5C7282D928000B21C07 /* studiosol_teste.xcdatamodeld in Sources */,
 				A403378F282EEB520024E6BC /* BooksCollectionViewModel.swift in Sources */,
 				A40337962830055B0024E6BC /* API.swift in Sources */,
+				A40337AC283424AB0024E6BC /* AuthorCell.swift in Sources */,
 				A4FBE5BF282D928000B21C07 /* SceneDelegate.swift in Sources */,
+				A40337B6283434C40024E6BC /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
