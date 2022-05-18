@@ -44,6 +44,7 @@
 		A4D237E228354E6F00F0B2A8 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4D237D628354E6F00F0B2A8 /* Roboto-Bold.ttf */; };
 		A4D237E328354E6F00F0B2A8 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4D237D728354E6F00F0B2A8 /* Roboto-MediumItalic.ttf */; };
 		A4D237E52835730500F0B2A8 /* UserPicture.graphql in Resources */ = {isa = PBXBuildFile; fileRef = A4D237E42835730500F0B2A8 /* UserPicture.graphql */; };
+		A4D237E728358EFD00F0B2A8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D237E628358EFD00F0B2A8 /* TabBarViewController.swift */; };
 		A4FBE5BD282D928000B21C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5BC282D928000B21C07 /* AppDelegate.swift */; };
 		A4FBE5BF282D928000B21C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5BE282D928000B21C07 /* SceneDelegate.swift */; };
 		A4FBE5C1282D928000B21C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5C0282D928000B21C07 /* ViewController.swift */; };
@@ -96,6 +97,7 @@
 		A4D237D628354E6F00F0B2A8 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		A4D237D728354E6F00F0B2A8 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		A4D237E42835730500F0B2A8 /* UserPicture.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = UserPicture.graphql; sourceTree = "<group>"; };
+		A4D237E628358EFD00F0B2A8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A4FBE5B9282D928000B21C07 /* studiosol_teste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = studiosol_teste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4FBE5BC282D928000B21C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4FBE5BE282D928000B21C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				A40337A9283421540024E6BC /* FavoriteAuthorsViewController.swift */,
 				A40337B328342EDC0024E6BC /* CategoriesViewController.swift */,
 				A40337BA2834515A0024E6BC /* AllBooksViewController.swift */,
+				A4D237E628358EFD00F0B2A8 /* TabBarViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				A40337A12832C72A0024E6BC /* DetailBookViewModel.swift in Sources */,
 				A403378C282EE8880024E6BC /* FavoriteBooksViewController.swift in Sources */,
 				A40337BD2834518C0024E6BC /* AllBooksViewModel.swift in Sources */,
+				A4D237E728358EFD00F0B2A8 /* TabBarViewController.swift in Sources */,
 				A4FBE5D5282EDDDA00B21C07 /* HomeViewController.swift in Sources */,
 				A403379B2832A0A30024E6BC /* WebServices.swift in Sources */,
 				A4033792282EECE60024E6BC /* FavoriteBookViewCell.swift in Sources */,

@@ -13,11 +13,14 @@ class DetailViewController: UIViewController {
     @IBOutlet var authorLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var favoriteButton: UIButton!
+    @IBOutlet var detailView: UIView!
     
     var detailVM: DetailBookViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupDetailView()
 
         detailVM?.getBookDetails() { [weak self] in
             self?.setup()
@@ -39,6 +42,16 @@ class DetailViewController: UIViewController {
         if !detailVM!.isFavorite! {
             favoriteButton.imageView?.image = UIImage(named: "notfav")
         }
+    }
+    
+    func setupDetailView() {
+        detailView.layer.shadowOffset = CGSize(width: 0,
+                                          height: -1)
+        detailView.layer.shadowRadius = 1
+        detailView.layer.shadowOpacity = 0.05
+        
+        detailView.layer.cornerRadius = 40
+        detailView.layer.maskedCorners = [.layerMinXMinYCorner]
     }
 
     @IBAction func backButtonPressed(_ sender: Any) {

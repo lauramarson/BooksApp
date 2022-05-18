@@ -18,8 +18,14 @@ class HomeViewController: UIViewController, UpdateScrollViewProtocol {
     
     @IBOutlet var userPicture: UIImageView!
     
+    @IBOutlet var headerView: UIView!
+    
+    @IBOutlet var authorsView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupView()
         
         WebServices().loadUserPicture() { [weak self] (picture) in
             let imageURL = URL(string: picture)
@@ -28,6 +34,19 @@ class HomeViewController: UIViewController, UpdateScrollViewProtocol {
             self?.userPicture.sd_setImage(with: imageURL, placeholderImage: placeholderImage)
         }
 
+    }
+    
+    func setupView() {
+        headerView.layer.shadowOffset = CGSize(width: 0,
+                                          height: 1)
+        headerView.layer.shadowRadius = 1
+        headerView.layer.shadowOpacity = 0.05
+        
+        headerView.layer.cornerRadius = 40
+        headerView.layer.maskedCorners = [.layerMaxXMaxYCorner]
+        
+        authorsView.layer.cornerRadius = 40
+        authorsView.layer.maskedCorners = [.layerMinXMinYCorner]
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,3 +60,4 @@ class HomeViewController: UIViewController, UpdateScrollViewProtocol {
     }
 
 }
+
