@@ -45,6 +45,8 @@
 		A4D237E328354E6F00F0B2A8 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4D237D728354E6F00F0B2A8 /* Roboto-MediumItalic.ttf */; };
 		A4D237E52835730500F0B2A8 /* UserPicture.graphql in Resources */ = {isa = PBXBuildFile; fileRef = A4D237E42835730500F0B2A8 /* UserPicture.graphql */; };
 		A4D237E728358EFD00F0B2A8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D237E628358EFD00F0B2A8 /* TabBarViewController.swift */; };
+		A4D237F028359E2300F0B2A8 /* studiosolUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D237EF28359E2300F0B2A8 /* studiosolUnitTests.swift */; };
+		A4D237F828359E5100F0B2A8 /* FavoriteBooksViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D237F728359E5100F0B2A8 /* FavoriteBooksViewModelTests.swift */; };
 		A4FBE5BD282D928000B21C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5BC282D928000B21C07 /* AppDelegate.swift */; };
 		A4FBE5BF282D928000B21C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5BE282D928000B21C07 /* SceneDelegate.swift */; };
 		A4FBE5C1282D928000B21C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5C0282D928000B21C07 /* ViewController.swift */; };
@@ -55,6 +57,16 @@
 		A4FBE5D5282EDDDA00B21C07 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5D4282EDDDA00B21C07 /* HomeViewController.swift */; };
 		CDC51FA6A1211BDBADBBEB3C /* Pods_studiosol_teste.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755D0CD290B5C10AD6BDC56C /* Pods_studiosol_teste.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A4D237F228359E2300F0B2A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4FBE5B1282D928000B21C07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4FBE5B8282D928000B21C07;
+			remoteInfo = studiosol_teste;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		19E588925286C52CEAE9F164 /* Pods-studiosol_teste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studiosol_teste.release.xcconfig"; path = "Target Support Files/Pods-studiosol_teste/Pods-studiosol_teste.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +110,10 @@
 		A4D237D728354E6F00F0B2A8 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		A4D237E42835730500F0B2A8 /* UserPicture.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = UserPicture.graphql; sourceTree = "<group>"; };
 		A4D237E628358EFD00F0B2A8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		A4D237ED28359E2200F0B2A8 /* studiosolUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = studiosolUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4D237EF28359E2300F0B2A8 /* studiosolUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studiosolUnitTests.swift; sourceTree = "<group>"; };
+		A4D237F128359E2300F0B2A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4D237F728359E5100F0B2A8 /* FavoriteBooksViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBooksViewModelTests.swift; sourceTree = "<group>"; };
 		A4FBE5B9282D928000B21C07 /* studiosol_teste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = studiosol_teste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4FBE5BC282D928000B21C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4FBE5BE282D928000B21C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +128,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A4D237EA28359E2200F0B2A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A4FBE5B6282D928000B21C07 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,10 +207,29 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		A4D237E828359BEA00F0B2A8 /* Testes */ = {
+			isa = PBXGroup;
+			children = (
+				A4D237F728359E5100F0B2A8 /* FavoriteBooksViewModelTests.swift */,
+			);
+			path = Testes;
+			sourceTree = "<group>";
+		};
+		A4D237EE28359E2300F0B2A8 /* studiosolUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				A4D237EF28359E2300F0B2A8 /* studiosolUnitTests.swift */,
+				A4D237F128359E2300F0B2A8 /* Info.plist */,
+			);
+			path = studiosolUnitTests;
+			sourceTree = "<group>";
+		};
 		A4FBE5B0282D928000B21C07 = {
 			isa = PBXGroup;
 			children = (
+				A4D237E828359BEA00F0B2A8 /* Testes */,
 				A4FBE5BB282D928000B21C07 /* studiosol_teste */,
+				A4D237EE28359E2300F0B2A8 /* studiosolUnitTests */,
 				A4FBE5BA282D928000B21C07 /* Products */,
 				D30302BC2B6C27A158A18A8A /* Pods */,
 				C84481012D3FA93202467208 /* Frameworks */,
@@ -198,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				A4FBE5B9282D928000B21C07 /* studiosol_teste.app */,
+				A4D237ED28359E2200F0B2A8 /* studiosolUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,6 +307,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A4D237EC28359E2200F0B2A8 /* studiosolUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4D237F428359E2300F0B2A8 /* Build configuration list for PBXNativeTarget "studiosolUnitTests" */;
+			buildPhases = (
+				A4D237E928359E2200F0B2A8 /* Sources */,
+				A4D237EA28359E2200F0B2A8 /* Frameworks */,
+				A4D237EB28359E2200F0B2A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4D237F328359E2300F0B2A8 /* PBXTargetDependency */,
+			);
+			name = studiosolUnitTests;
+			productName = studiosolUnitTests;
+			productReference = A4D237ED28359E2200F0B2A8 /* studiosolUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A4FBE5B8282D928000B21C07 /* studiosol_teste */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4FBE5D0282D928200B21C07 /* Build configuration list for PBXNativeTarget "studiosol_teste" */;
@@ -293,6 +354,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					A4D237EC28359E2200F0B2A8 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = A4FBE5B8282D928000B21C07;
+					};
 					A4FBE5B8282D928000B21C07 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -312,11 +377,19 @@
 			projectRoot = "";
 			targets = (
 				A4FBE5B8282D928000B21C07 /* studiosol_teste */,
+				A4D237EC28359E2200F0B2A8 /* studiosolUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A4D237EB28359E2200F0B2A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A4FBE5B7282D928000B21C07 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -407,6 +480,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A4D237E928359E2200F0B2A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4D237F028359E2300F0B2A8 /* studiosolUnitTests.swift in Sources */,
+				A4D237F828359E5100F0B2A8 /* FavoriteBooksViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A4FBE5B5282D928000B21C07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,6 +524,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A4D237F328359E2300F0B2A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4FBE5B8282D928000B21C07 /* studiosol_teste */;
+			targetProxy = A4D237F228359E2300F0B2A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		A4FBE5C2282D928000B21C07 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -462,6 +552,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A4D237F528359E2300F0B2A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 499LUVNFHJ;
+				INFOPLIST_FILE = studiosolUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lmarson.studiosolUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/studiosol_teste.app/studiosol_teste";
+			};
+			name = Debug;
+		};
+		A4D237F628359E2300F0B2A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 499LUVNFHJ;
+				INFOPLIST_FILE = studiosolUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lmarson.studiosolUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/studiosol_teste.app/studiosol_teste";
+			};
+			name = Release;
+		};
 		A4FBE5CE282D928200B21C07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -621,6 +751,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A4D237F428359E2300F0B2A8 /* Build configuration list for PBXNativeTarget "studiosolUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4D237F528359E2300F0B2A8 /* Debug */,
+				A4D237F628359E2300F0B2A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A4FBE5B4282D928000B21C07 /* Build configuration list for PBXProject "studiosol_teste" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

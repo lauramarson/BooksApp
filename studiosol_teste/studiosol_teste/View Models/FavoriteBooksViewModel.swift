@@ -23,10 +23,6 @@ class FavoriteBooksViewModel {
         return favoriteBooks[index]
     }
     
-//    func posterAt(_ index: Int) -> URL {
-//        return URL(string: favoriteBooks[index].cover)!
-//    }
-    
     func getFavoriteBooks(completion: @escaping () -> ()) {
         webServices.loadFavoriteBooks() { [weak self] (books) in
             self?.favoriteBooks = books
