@@ -8,7 +8,11 @@
 import Foundation
 import Apollo
 
-class WebServices {
+protocol WebServicesContract: AnyObject {
+    func loadFavoriteBooks(completion: @escaping ([FavoriteBooksQuery.Data.FavoriteBook]) -> ())
+}
+
+class WebServices: WebServicesContract {
     
     func loadFavoriteBooks(completion: @escaping ([FavoriteBooksQuery.Data.FavoriteBook]) -> ()) {
       Network.shared.apollo

@@ -8,14 +8,14 @@
 import Foundation
 
 class FavoriteBooksViewModel {
-    var webServices: WebServices
+    var webServices: WebServicesContract
     var favoriteBooks = [FavoriteBooksQuery.Data.FavoriteBook]()
     
-    init(webServices: WebServices = WebServices()) {
+    init(webServices: WebServicesContract = WebServices()) {
         self.webServices = webServices
     }
     
-    func numberOfItems(_ section: Int) -> Int {
+    func numberOfItems() -> Int {
         return favoriteBooks.count
     }
     

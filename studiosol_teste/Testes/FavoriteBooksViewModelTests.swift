@@ -6,27 +6,36 @@
 //
 
 import XCTest
+@testable import studiosol_teste
 
 class FavoriteBooksViewModelTests: XCTestCase {
-
+    
+    var successWebService = SuccessWebService()
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        try super.setUpWithError()
+        
+        successWebService = SuccessWebService()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testBooksCountAfterServiceCall() throws {
+        
+        let viewModel = FavoriteBooksViewModel(webServices: successWebService)
+        
+        viewModel.getFavoriteBooks { }
+        
+        XCTAssertEqual(viewModel.numberOfItems(), successWebService.loadedFavoriteBooks.count)
     }
+    
+    func testIfReturnedModelIsCorrect() throws {
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+        let viewModel = FavoriteBooksViewModel(webServices: successWebService)
+        
+        viewModel.getFavoriteBooks { }
+        
+        let returnedBook = viewModel.modelAt(5)
+        
+        XCTAssertEqual(successWebService.loadedFavoriteBooks[5].id, returnedBook.id)
     }
 
 }

@@ -71,7 +71,7 @@ class FavoriteBooksViewController: UIViewController {
 extension FavoriteBooksViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return booksCollectionVM.numberOfItems(section)
+        return booksCollectionVM.numberOfItems()
 //          guard let listSection = ListSection(rawValue: section) else {
 //            assertionFailure("Invalid section")
 //            return 0
