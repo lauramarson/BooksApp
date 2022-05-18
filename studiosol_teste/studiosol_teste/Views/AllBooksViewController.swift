@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol UpdateScrollViewProtocol: AnyObject {
+    func updateHeight(height: CGFloat)
+}
+
 class AllBooksViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var tableViewHeight: NSLayoutConstraint!
     
+    weak var delegate: UpdateScrollViewProtocol?
     var allBooksVM = AllBooksViewModel()
 
     override func viewDidLoad() {
@@ -21,8 +27,13 @@ class AllBooksViewController: UIViewController {
         
         tableView.register(UINib(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "Book")
         
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        
         allBooksVM.getAllBooks { [weak self] in
             self?.tableView.reloadData()
+            guard let newHeight = self?.tableView.contentSize.height else { return }
+            self?.tableViewHeight.constant = newHeight
+            self?.delegate?.updateHeight(height: newHeight)
         }
     }
 }

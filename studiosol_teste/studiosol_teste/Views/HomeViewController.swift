@@ -7,51 +7,27 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UpdateScrollViewProtocol {
     
-//    private lazy var firstBooksViewController: FirstBooksViewController = {
-//        // Load Storyboard
-//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-//
-//        // Instantiate View Controller
-//        var viewController = storyboard.instantiateViewController(withIdentifier: "FirstBooksViewController") as! FirstBooksViewController
-//
-//        // Add View Controller as Child View Controller
-//        self.add(asChildViewController: viewController)
-//
-//        return viewController
-//    }()
-//    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        add(asChildViewController: firstBooksViewController)
-//    }
-//    
-//    private func add(asChildViewController viewController: UIViewController) {
-//        // Add Child View Controller
-//        addChild(viewController)
-//
-//        // Add Child View as Subview
-//        view.addSubview(viewController.view)
-//
-//        // Configure Child View
-//        viewController.view.frame = view.bounds
-//        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//
-//        // Notify Child View Controller
-//        viewController.didMove(toParent: self)
-//    }
-//    
+    @IBOutlet var scrollView: UIScrollView!
 
-    /*
-    // MARK: - Navigation
+    @IBOutlet var tableViewContainer: UIView!
+    
+    @IBOutlet var tableViewContainerHeight: NSLayoutConstraint!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let allBooksVC = segue.destination as? AllBooksViewController {
+            allBooksVC.delegate = self
+        }
+    }
+    
+    func updateHeight(height: CGFloat) {
+        tableViewContainerHeight.constant = height
+    }
 
 }

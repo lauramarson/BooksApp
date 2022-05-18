@@ -34,5 +34,9 @@ class AuthorCell: UICollectionViewCell {
         let placeholderImage = UIImage(named: "imagePlaceholder")
 
         imageView.sd_setImage(with: imageURL, placeholderImage: placeholderImage)
+        
+        self.layer.borderWidth = CGFloat(0.5)
+        self.layer.borderColor = UIColor.lightGray.cgColor
+        self.layer.cornerRadius = 10.0
     }
 }

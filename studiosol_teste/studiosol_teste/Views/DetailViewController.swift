@@ -21,7 +21,7 @@ class DetailViewController: UIViewController {
 
         detailVM?.getBookDetails() { [weak self] in
             self?.setup()
-            self?.descriptionLabel.text = self?.detailVM?.description
+//            self?.descriptionLabel.text = self?.detailVM?.description
         }
     }
     
