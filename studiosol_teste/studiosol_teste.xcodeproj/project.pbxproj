@@ -43,6 +43,7 @@
 		A4D237E128354E6F00F0B2A8 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4D237D528354E6E00F0B2A8 /* Roboto-Light.ttf */; };
 		A4D237E228354E6F00F0B2A8 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4D237D628354E6F00F0B2A8 /* Roboto-Bold.ttf */; };
 		A4D237E328354E6F00F0B2A8 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4D237D728354E6F00F0B2A8 /* Roboto-MediumItalic.ttf */; };
+		A4D237E52835730500F0B2A8 /* UserPicture.graphql in Resources */ = {isa = PBXBuildFile; fileRef = A4D237E42835730500F0B2A8 /* UserPicture.graphql */; };
 		A4FBE5BD282D928000B21C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5BC282D928000B21C07 /* AppDelegate.swift */; };
 		A4FBE5BF282D928000B21C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5BE282D928000B21C07 /* SceneDelegate.swift */; };
 		A4FBE5C1282D928000B21C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE5C0282D928000B21C07 /* ViewController.swift */; };
@@ -94,6 +95,7 @@
 		A4D237D528354E6E00F0B2A8 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		A4D237D628354E6F00F0B2A8 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		A4D237D728354E6F00F0B2A8 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		A4D237E42835730500F0B2A8 /* UserPicture.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = UserPicture.graphql; sourceTree = "<group>"; };
 		A4FBE5B9282D928000B21C07 /* studiosol_teste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = studiosol_teste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4FBE5BC282D928000B21C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4FBE5BE282D928000B21C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				A40337A42832E0120024E6BC /* BookDetails.graphql */,
 				A40337AF283428630024E6BC /* FavoriteAuthors.graphql */,
 				A40337BE283451B30024E6BC /* AllBooks.graphql */,
+				A4D237E42835730500F0B2A8 /* UserPicture.graphql */,
 			);
 			path = studiosol_teste;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				A4FBE5C4282D928000B21C07 /* Main.storyboard in Resources */,
 				A4D237E328354E6F00F0B2A8 /* Roboto-MediumItalic.ttf in Resources */,
 				A4D237D928354E6F00F0B2A8 /* Roboto-Thin.ttf in Resources */,
+				A4D237E52835730500F0B2A8 /* UserPicture.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

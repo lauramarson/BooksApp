@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeViewController: UIViewController, UpdateScrollViewProtocol {
     
@@ -15,8 +16,17 @@ class HomeViewController: UIViewController, UpdateScrollViewProtocol {
     
     @IBOutlet var tableViewContainerHeight: NSLayoutConstraint!
     
+    @IBOutlet var userPicture: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        WebServices().loadUserPicture() { [weak self] (picture) in
+            let imageURL = URL(string: picture)
+            let placeholderImage = UIImage(named: "imagePlaceholder")
+            
+            self?.userPicture.sd_setImage(with: imageURL, placeholderImage: placeholderImage)
+        }
 
     }
     

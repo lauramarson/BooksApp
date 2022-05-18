@@ -41,4 +41,25 @@ class DetailViewController: UIViewController {
         }
     }
 
+    @IBAction func backButtonPressed(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+}
+
+class GradientView: UIView {
+    override open class var layerClass: AnyClass {
+        return CAGradientLayer.classForCoder()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        let gradientLayer = self.layer as! CAGradientLayer
+//        gradientLayer.colors = [
+//            UIColor.black.cgColor,
+//            UIColor.init(red: 1, green: 1, blue: 1, alpha: 0).cgColor
+//        ]
+        gradientLayer.colors = [UIColor.black.withAlphaComponent(0.75).cgColor,
+                                    UIColor.black.withAlphaComponent(0.0).cgColor]
+        backgroundColor = UIColor.clear
+    }
 }

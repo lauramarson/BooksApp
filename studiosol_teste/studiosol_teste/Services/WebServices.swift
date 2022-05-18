@@ -112,3 +112,27 @@ extension WebServices {
       }
     }
 }
+
+extension WebServices {
+    func loadUserPicture(completion: @escaping (String) -> ()) {
+        
+      Network.shared.apollo.fetch(query: UserPictureQuery()) { result in
+        
+        switch result {
+        case .failure(let error):
+            print(error.localizedDescription)
+        case .success(let graphQLResult):
+            if let userPicture = graphQLResult.data?.userPicture {
+                completion(userPicture)
+          }
+        
+          if let errors = graphQLResult.errors {
+            let message = errors
+                            .map { $0.localizedDescription }
+                            .joined(separator: "\n")
+            print(message)
+          }
+        }
+      }
+    }
+}
