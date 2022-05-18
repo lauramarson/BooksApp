@@ -23,10 +23,14 @@ class FavoriteBooksViewModel {
         return favoriteBooks[index]
     }
     
-    func getFavoriteBooks(completion: @escaping () -> ()) {
-        webServices.loadFavoriteBooks() { [weak self] (books) in
-            self?.favoriteBooks = books
-            completion()
+    func getFavoriteBooks(completion: @escaping (String?) -> ()) {
+        webServices.loadFavoriteBooks() { [weak self] (books, error) in
+            if let books = books {
+                self?.favoriteBooks = books
+                completion(nil)
+            } else {
+                completion(error)
+            }
         }
     }
 }

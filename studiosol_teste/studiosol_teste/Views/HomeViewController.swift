@@ -8,11 +8,7 @@
 import UIKit
 import SDWebImage
 
-class HomeViewController: UIViewController, UpdateScrollViewProtocol {
-    
-    @IBOutlet var scrollView: UIScrollView!
-
-    @IBOutlet var tableViewContainer: UIView!
+class HomeViewController: UIViewController, UpdateScrollViewProtocol, ShowAlertProtocol {
     
     @IBOutlet var tableViewContainerHeight: NSLayoutConstraint!
     
@@ -51,12 +47,25 @@ class HomeViewController: UIViewController, UpdateScrollViewProtocol {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let allBooksVC = segue.destination as? AllBooksViewController {
-            allBooksVC.delegate = self
+            allBooksVC.heightDelegate = self
+            allBooksVC.alertDelegate = self
+        }
+        
+        if let favoriteBooksVC = segue.destination as? FavoriteBooksViewController {
+            favoriteBooksVC.delegate = self
+        }
+        
+        if let favoriteAuthorsVC = segue.destination as? FavoriteAuthorsViewController {
+            favoriteAuthorsVC.delegate = self
         }
     }
     
     func updateHeight(height: CGFloat) {
         tableViewContainerHeight.constant = height
+    }
+    
+    func alert(_ alert: UIAlertController) {
+        present(alert, animated: true)
     }
 
 }

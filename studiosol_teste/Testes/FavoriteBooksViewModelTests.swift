@@ -22,7 +22,7 @@ class FavoriteBooksViewModelTests: XCTestCase {
         
         let viewModel = FavoriteBooksViewModel(webServices: successWebService)
         
-        viewModel.getFavoriteBooks { }
+        viewModel.getFavoriteBooks { _ in }
         
         XCTAssertEqual(viewModel.numberOfItems(), successWebService.loadedFavoriteBooks.count)
     }
@@ -31,7 +31,7 @@ class FavoriteBooksViewModelTests: XCTestCase {
 
         let viewModel = FavoriteBooksViewModel(webServices: successWebService)
         
-        viewModel.getFavoriteBooks { }
+        viewModel.getFavoriteBooks { _ in }
         
         let returnedBook = viewModel.modelAt(5)
         

@@ -16,7 +16,8 @@ class AllBooksViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var tableViewHeight: NSLayoutConstraint!
     
-    weak var delegate: UpdateScrollViewProtocol?
+    weak var heightDelegate: UpdateScrollViewProtocol?
+    weak var alertDelegate: ShowAlertProtocol?
     var allBooksVM = AllBooksViewModel()
 
     override func viewDidLoad() {
@@ -29,11 +30,16 @@ class AllBooksViewController: UIViewController {
         
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
-        allBooksVM.getAllBooks { [weak self] in
-            self?.tableView.reloadData()
-            guard let newHeight = self?.tableView.contentSize.height else { return }
-            self?.tableViewHeight.constant = newHeight
-            self?.delegate?.updateHeight(height: newHeight)
+        allBooksVM.getAllBooks { [weak self] (error) in
+            if let error = error {
+                guard let alert = self?.fetchAlert(title: "Erro ao carregar lista de livros", message: error) else {return}
+                self?.alertDelegate?.alert(alert)
+            } else {
+                self?.tableView.reloadData()
+                guard let newHeight = self?.tableView.contentSize.height else { return }
+                self?.tableViewHeight.constant = newHeight
+                self?.heightDelegate?.updateHeight(height: newHeight)
+            }
         }
     }
 }

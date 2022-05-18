@@ -9,12 +9,12 @@ import Foundation
 import Apollo
 
 protocol WebServicesContract: AnyObject {
-    func loadFavoriteBooks(completion: @escaping ([FavoriteBooksQuery.Data.FavoriteBook]) -> ())
+    func loadFavoriteBooks(completion: @escaping ([FavoriteBooksQuery.Data.FavoriteBook]?, String?) -> ())
 }
 
 class WebServices: WebServicesContract {
     
-    func loadFavoriteBooks(completion: @escaping ([FavoriteBooksQuery.Data.FavoriteBook]) -> ()) {
+    func loadFavoriteBooks(completion: @escaping ([FavoriteBooksQuery.Data.FavoriteBook]?, String?) -> ()) {
       Network.shared.apollo
         .fetch(query: FavoriteBooksQuery()) { result in
                 
@@ -23,7 +23,7 @@ class WebServices: WebServicesContract {
             var favoriteBooks = [FavoriteBooksQuery.Data.FavoriteBook]()
             if let fetchedBooks = graphQLResult.data?.favoriteBooks {
                 favoriteBooks.append(contentsOf: fetchedBooks.compactMap { $0 })
-                completion(favoriteBooks)
+                completion(favoriteBooks, nil)
             }
                     
             if let errors = graphQLResult.errors {
@@ -31,9 +31,11 @@ class WebServices: WebServicesContract {
                     .map { $0.localizedDescription }
                     .joined(separator: "\n")
                 print(message)
+                completion(nil, message)
             }
         case .failure(let error):
             print(error.localizedDescription)
+            completion(nil, error.localizedDescription)
         }
       }
     }
@@ -65,7 +67,7 @@ extension WebServices {
 
 extension WebServices {
     
-    func loadFavoriteAuthors(completion: @escaping ([FavoriteAuthorsQuery.Data.FavoriteAuthor]) -> ()) {
+    func loadFavoriteAuthors(completion: @escaping ([FavoriteAuthorsQuery.Data.FavoriteAuthor]?, String?) -> ()) {
       Network.shared.apollo
         .fetch(query: FavoriteAuthorsQuery()) { result in
                 
@@ -74,7 +76,7 @@ extension WebServices {
             var favoriteAuthors = [FavoriteAuthorsQuery.Data.FavoriteAuthor]()
             if let fetchedAuthors = graphQLResult.data?.favoriteAuthors {
                 favoriteAuthors.append(contentsOf: fetchedAuthors.compactMap { $0 })
-                completion(favoriteAuthors)
+                completion(favoriteAuthors, nil)
             }
                     
             if let errors = graphQLResult.errors {
@@ -82,9 +84,11 @@ extension WebServices {
                     .map { $0.localizedDescription }
                     .joined(separator: "\n")
                 print(message)
+                completion(nil, message)
             }
         case .failure(let error):
             print(error.localizedDescription)
+            completion(nil, error.localizedDescription)
         }
       }
     }
@@ -92,7 +96,7 @@ extension WebServices {
 
 extension WebServices {
     
-    func loadAllBooks(completion: @escaping ([AllBooksQuery.Data.AllBook]) -> ()) {
+    func loadAllBooks(completion: @escaping ([AllBooksQuery.Data.AllBook]?, String?) -> ()) {
       Network.shared.apollo
         .fetch(query: AllBooksQuery()) { result in
                 
@@ -101,7 +105,7 @@ extension WebServices {
             var allBooks = [AllBooksQuery.Data.AllBook]()
             if let fetchedBooks = graphQLResult.data?.allBooks {
                 allBooks.append(contentsOf: fetchedBooks.compactMap { $0 })
-                completion(allBooks)
+                completion(allBooks, nil)
             }
                     
             if let errors = graphQLResult.errors {
@@ -109,9 +113,11 @@ extension WebServices {
                     .map { $0.localizedDescription }
                     .joined(separator: "\n")
                 print(message)
+                completion(nil, message)
             }
         case .failure(let error):
             print(error.localizedDescription)
+            completion(nil, error.localizedDescription)
         }
       }
     }

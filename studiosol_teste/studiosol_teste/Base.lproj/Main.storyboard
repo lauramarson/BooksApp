@@ -256,8 +256,6 @@
                     <connections>
                         <outlet property="authorsView" destination="XeX-Vl-JmP" id="Th3-am-x2M"/>
                         <outlet property="headerView" destination="bev-Rf-hHN" id="ElE-sq-ur2"/>
-                        <outlet property="scrollView" destination="4rd-vU-e3S" id="kzc-NZ-zi4"/>
-                        <outlet property="tableViewContainer" destination="mvG-wY-mkY" id="Diy-Qu-5hx"/>
                         <outlet property="tableViewContainerHeight" destination="klq-Sp-bC9" id="7q1-lM-tR4"/>
                         <outlet property="userPicture" destination="UBU-2v-BW6" id="SlC-cd-AWT"/>
                     </connections>

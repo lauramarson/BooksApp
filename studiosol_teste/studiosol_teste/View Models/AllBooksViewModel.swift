@@ -23,10 +23,15 @@ class AllBooksViewModel {
         return allBooks[index]
     }
     
-    func getAllBooks(completion: @escaping () -> ()) {
-        webServices.loadAllBooks() { [weak self] (books) in
-            self?.allBooks = books
-            completion()
+    func getAllBooks(completion: @escaping (String?) -> ()) {
+        webServices.loadAllBooks() { [weak self] (books, error) in
+            if let books = books {
+                self?.allBooks = books
+                completion(nil)
+            } else {
+                completion(error)
+            }
+            
         }
     }
 }

@@ -13,6 +13,8 @@ class FavoriteAuthorsViewController: UIViewController {
     private let reuseIdentifier = "Author"
     
     var favoriteAuthorsVM = FavoriteAuthorsViewModel()
+    
+    weak var delegate: ShowAlertProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +22,13 @@ class FavoriteAuthorsViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        favoriteAuthorsVM.getFavoriteAuthors { [weak self] in
-            self?.collectionView.reloadData()
+        favoriteAuthorsVM.getFavoriteAuthors { [weak self] (error) in
+            if let error = error {
+                guard let alert = self?.fetchAlert(title: "Erro ao carregar autores favoritos", message: error) else {return}
+                self?.delegate?.alert(alert)
+            } else {
+                self?.collectionView.reloadData()
+            }
         }
     }
 }
