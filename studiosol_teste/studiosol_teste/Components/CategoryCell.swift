@@ -15,4 +15,16 @@ class CategoryCell: UICollectionViewCell {
          super.awakeFromNib()
      }
     
+    func setupButton(category: String) {
+        categoryButton.setTitle(" \(category) ", for: .normal)
+        
+        if category == "Todos" {
+            categoryButton.backgroundColor = UIColor(hex: "#A076F2ff")
+            categoryButton.setTitleColor(.white, for: .normal)
+        } else {
+            categoryButton.backgroundColor = .white
+            categoryButton.setTitleColor(UIColor(hex: "#757575ff"), for: .normal)
+        }
+    }
+    
 }

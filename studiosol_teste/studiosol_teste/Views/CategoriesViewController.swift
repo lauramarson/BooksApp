@@ -35,7 +35,7 @@ extension CategoriesViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
 
-        cell.categoryButton.setTitle(" \(categories[indexPath.row]) ", for: .normal)
+        cell.setupButton(category: categories[indexPath.row])
         cell.layer.borderWidth = CGFloat(0.5)
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.cornerRadius = 20.0
@@ -56,8 +56,8 @@ extension CategoriesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let item = categories[indexPath.row]
         let itemWidth = item.size(withAttributes: [
-            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)
+            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)
         ]).width
-        return CGSize(width: itemWidth + 50, height: 43)
+        return CGSize(width: itemWidth + 40, height: 43)
     }
 }

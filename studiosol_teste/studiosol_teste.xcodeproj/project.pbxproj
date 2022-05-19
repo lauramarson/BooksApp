@@ -38,6 +38,7 @@
 		A4BECE992836C70200A611E5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BECE982836C70200A611E5 /* API.swift */; };
 		A4BECE9B2836CDBC00A611E5 /* bebas-neue-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A4BECE9A2836CDBC00A611E5 /* bebas-neue-regular.otf */; };
 		A4BECE9E2836F90C00A611E5 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BECE9D2836F90C00A611E5 /* GradientView.swift */; };
+		A4BECEA02836FF5F00A611E5 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BECE9F2836FF5F00A611E5 /* UIColorExtension.swift */; };
 		A4D237D828354E6F00F0B2A8 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4D237CC28354E6C00F0B2A8 /* Roboto-Regular.ttf */; };
 		A4D237D928354E6F00F0B2A8 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4D237CD28354E6D00F0B2A8 /* Roboto-Thin.ttf */; };
 		A4D237DA28354E6F00F0B2A8 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4D237CE28354E6D00F0B2A8 /* Roboto-ThinItalic.ttf */; };
@@ -110,6 +111,7 @@
 		A4BECE982836C70200A611E5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A4BECE9A2836CDBC00A611E5 /* bebas-neue-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bebas-neue-regular.otf"; sourceTree = "<group>"; };
 		A4BECE9D2836F90C00A611E5 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		A4BECE9F2836FF5F00A611E5 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		A4D237CC28354E6C00F0B2A8 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		A4D237CD28354E6D00F0B2A8 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		A4D237CE28354E6D00F0B2A8 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			children = (
 				A40337B828344AAD0024E6BC /* storyboardSettings.swift */,
 				A4D237FD2835B05900F0B2A8 /* Alert+UIViewController.swift */,
+				A4BECE9F2836FF5F00A611E5 /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				A4FBE5BD282D928000B21C07 /* AppDelegate.swift in Sources */,
 				A40337AE283427650024E6BC /* FavoriteAuthorsViewModel.swift in Sources */,
 				A40337BB2834515A0024E6BC /* AllBooksViewController.swift in Sources */,
+				A4BECEA02836FF5F00A611E5 /* UIColorExtension.swift in Sources */,
 				A4FBE5C7282D928000B21C07 /* studiosol_teste.xcdatamodeld in Sources */,
 				A403378F282EEB520024E6BC /* FavoriteBooksViewModel.swift in Sources */,
 				A4BECE8B28369D9F00A611E5 /* Book.swift in Sources */,
