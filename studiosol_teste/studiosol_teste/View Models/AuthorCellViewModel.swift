@@ -8,21 +8,15 @@
 import Foundation
 
 class AuthorCellViewModel {
-    var author: FavoriteAuthorsQuery.Data.FavoriteAuthor
+    var author: Author
     
-    init(_ author: FavoriteAuthorsQuery.Data.FavoriteAuthor) {
+    init(_ author: Author) {
         self.author = author
     }
     
-    var name: String {
-        return author.name
-    }
+    var name: String { author.name }
     
-    var booksCount: Int {
-        return author.booksCount
-    }
+    var booksCount: Int { author.booksCount }
     
-    var imageURL: URL {
-        return URL(string: author.picture)!
-    }
+    var imageURL: URL? { URL(string: author.picture) }
 }

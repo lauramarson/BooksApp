@@ -76,15 +76,8 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZb-Ut-1jj">
-                                                        <rect key="frame" x="31" y="87" width="73" height="29"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
-                                                        <state key="normal" title="Meus livros">
-                                                            <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                        </state>
-                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7M-3r-0Nm">
-                                                        <rect key="frame" x="144" y="87" width="83" height="29"/>
+                                                        <rect key="frame" x="144" y="83" width="83" height="29"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
                                                         <state key="normal" title="Emprestados">
                                                             <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -96,20 +89,37 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbs-DC-z6E">
+                                                        <rect key="frame" x="31" y="83" width="73" height="29"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                        <state key="normal" title="Meus livros">
+                                                            <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        </state>
+                                                    </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="- ativo" translatesAutoresizingMaskIntoConstraints="NO" id="HfV-E1-f0d">
+                                                        <rect key="frame" x="20.5" y="124" width="94" height="4"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="HfV-E1-f0d" firstAttribute="leading" secondItem="bev-Rf-hHN" secondAttribute="leading" constant="20.5" id="4Ym-oL-9RP"/>
                                                     <constraint firstAttribute="height" constant="128" id="9rY-bl-zFG"/>
-                                                    <constraint firstItem="wZb-Ut-1jj" firstAttribute="leading" secondItem="bev-Rf-hHN" secondAttribute="leading" constant="31" id="9xl-R8-G5X"/>
-                                                    <constraint firstAttribute="bottom" secondItem="D7M-3r-0Nm" secondAttribute="bottom" constant="12" id="Sc3-aT-2BR"/>
+                                                    <constraint firstAttribute="bottom" secondItem="HfV-E1-f0d" secondAttribute="bottom" id="IcO-ZD-WS6"/>
+                                                    <constraint firstItem="D7M-3r-0Nm" firstAttribute="leading" secondItem="Bbs-DC-z6E" secondAttribute="trailing" constant="40" id="NGM-p9-d0m"/>
+                                                    <constraint firstItem="Bbs-DC-z6E" firstAttribute="leading" secondItem="bev-Rf-hHN" secondAttribute="leading" constant="31" id="avc-Pj-myq"/>
                                                     <constraint firstItem="EFh-Ne-7zt" firstAttribute="leading" secondItem="bev-Rf-hHN" secondAttribute="leading" constant="20" id="bdg-aE-DuW"/>
-                                                    <constraint firstItem="D7M-3r-0Nm" firstAttribute="leading" secondItem="wZb-Ut-1jj" secondAttribute="trailing" constant="40" id="cjD-jX-nUB"/>
                                                     <constraint firstAttribute="trailing" secondItem="UBU-2v-BW6" secondAttribute="trailing" constant="30" id="dMh-lo-qgZ"/>
+                                                    <constraint firstItem="HfV-E1-f0d" firstAttribute="top" secondItem="Bbs-DC-z6E" secondAttribute="bottom" constant="12" id="fEV-X9-wyU"/>
                                                     <constraint firstItem="EFh-Ne-7zt" firstAttribute="top" secondItem="bev-Rf-hHN" secondAttribute="top" constant="10" id="gnE-pe-bC3"/>
-                                                    <constraint firstAttribute="bottom" secondItem="wZb-Ut-1jj" secondAttribute="bottom" constant="12" id="lDZ-xz-oVb"/>
                                                     <constraint firstItem="UBU-2v-BW6" firstAttribute="top" secondItem="bev-Rf-hHN" secondAttribute="top" constant="10" id="mJf-hx-Pkt"/>
                                                     <constraint firstItem="UBU-2v-BW6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EFh-Ne-7zt" secondAttribute="trailing" constant="8" symbolic="YES" id="mTP-F1-kdQ"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="D7M-3r-0Nm" secondAttribute="trailing" constant="20" symbolic="YES" id="ub0-yf-jhN"/>
+                                                    <constraint firstItem="D7M-3r-0Nm" firstAttribute="bottom" secondItem="Bbs-DC-z6E" secondAttribute="bottom" id="wHd-fz-kdi"/>
                                                 </constraints>
                                             </view>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAR-yv-Huy">
@@ -685,7 +695,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0uk-Oz-ple">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0uk-Oz-ple">
                                 <rect key="frame" x="20" y="0.0" width="394" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HNA-y2-dGE">
@@ -783,6 +793,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="- ativo" width="94" height="4"/>
         <image name="Vector" width="20" height="20"/>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="buscar" width="24" height="24"/>

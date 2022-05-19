@@ -8,9 +8,8 @@
 import UIKit
 import SDWebImage
 
-private let reuseIdentifier = "FavoriteBook"
-
 class FavoriteBooksViewController: UIViewController {
+    private let reuseIdentifier = "FavoriteBook"
     
     var booksCollectionVM = FavoriteBooksViewModel()
     
@@ -49,7 +48,7 @@ extension FavoriteBooksViewController: UICollectionViewDataSource {
         }
         
         let book = booksCollectionVM.modelAt(indexPath.row)
-        cell.bookCellVM = FavoriteBookCellViewModel(book)
+        cell.bookCellVM = BookCellViewModel(book)
         
         cell.configure()
 
@@ -63,8 +62,8 @@ extension FavoriteBooksViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController else { return }
 
-        let bookID = booksCollectionVM.modelAt(indexPath.row).id
-        dvc.detailVM = DetailBookViewModel(bookID: bookID)
+        let book = booksCollectionVM.modelAt(indexPath.row)
+        dvc.detailVM = DetailBookViewModel(book: book)
 
         navigationController?.pushViewController(dvc, animated: true)
     }

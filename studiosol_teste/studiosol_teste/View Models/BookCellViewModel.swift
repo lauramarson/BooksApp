@@ -7,22 +7,18 @@
 
 import Foundation
 
-class BookCellViewModel {
-    var book: AllBooksQuery.Data.AllBook
+struct BookCellViewModel {
+    private let book: Book
     
-    init(_ book: AllBooksQuery.Data.AllBook) {
+    init(_ book: Book) {
         self.book = book
     }
     
-    var title: String {
-        return book.name
-    }
+    var id: String { book.id }
     
-    var author: String {
-        return book.author.name
-    }
+    var title: String { book.title }
     
-    var imageURL: URL {
-        return URL(string: book.cover)!
-    }
+    var author: String { book.author }
+    
+    var imageURL: URL { URL(string: book.cover)! }
 }

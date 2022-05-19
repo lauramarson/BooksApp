@@ -55,8 +55,8 @@ extension AllBooksViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let bookModel = allBooksVM.modelAt(indexPath.row)
-        cell.bookCellVM = BookCellViewModel(bookModel)
+        let book = allBooksVM.modelAt(indexPath.row)
+        cell.bookCellVM = BookCellViewModel(book)
         
         cell.configure()
         
@@ -69,8 +69,8 @@ extension AllBooksViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController else { return }
 
-        let bookID = allBooksVM.modelAt(indexPath.row).id
-        dvc.detailVM = DetailBookViewModel(bookID: bookID)
+        let book = allBooksVM.modelAt(indexPath.row)
+        dvc.detailVM = DetailBookViewModel(book: book)
 
         navigationController?.pushViewController(dvc, animated: true)
     }

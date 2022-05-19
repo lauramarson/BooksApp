@@ -9,7 +9,7 @@ import Foundation
 
 class AllBooksViewModel {
     var webServices: WebServices
-    var allBooks = [AllBooksQuery.Data.AllBook]()
+    var allBooks = [Book]()
     
     init(webServices: WebServices = WebServices()) {
         self.webServices = webServices
@@ -19,14 +19,14 @@ class AllBooksViewModel {
         return allBooks.count
     }
     
-    func modelAt(_ index: Int) -> AllBooksQuery.Data.AllBook {
+    func modelAt(_ index: Int) -> Book {
         return allBooks[index]
     }
     
     func getAllBooks(completion: @escaping (String?) -> ()) {
         webServices.loadAllBooks() { [weak self] (books, error) in
             if let books = books {
-                self?.allBooks = books
+                self?.allBooks = books.map { Book(book: $0) }
                 completion(nil)
             } else {
                 completion(error)

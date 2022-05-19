@@ -9,7 +9,7 @@ import Foundation
 
 class FavoriteAuthorsViewModel {
     var webServices: WebServices
-    var favoriteAuthors = [FavoriteAuthorsQuery.Data.FavoriteAuthor]()
+    var favoriteAuthors = [Author]()
     
     init(webServices: WebServices = WebServices()) {
         self.webServices = webServices
@@ -19,14 +19,14 @@ class FavoriteAuthorsViewModel {
         return favoriteAuthors.count
     }
     
-    func modelAt(_ index: Int) -> FavoriteAuthorsQuery.Data.FavoriteAuthor {
+    func modelAt(_ index: Int) -> Author {
         return favoriteAuthors[index]
     }
     
     func getFavoriteAuthors(completion: @escaping (String?) -> ()) {
         webServices.loadFavoriteAuthors() { [weak self] (authors, error) in
             if let authors = authors {
-                self?.favoriteAuthors = authors
+                self?.favoriteAuthors = authors.map { Author(author: $0) }
                 completion(nil)
             } else {
                 completion(error)

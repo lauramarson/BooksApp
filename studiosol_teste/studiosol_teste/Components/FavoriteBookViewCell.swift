@@ -12,7 +12,7 @@ class FavoriteBookViewCell: UICollectionViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
     
-    var bookCellVM: FavoriteBookCellViewModel?
+    var bookCellVM: BookCellViewModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
