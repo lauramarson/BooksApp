@@ -8,10 +8,10 @@
 import Foundation
 
 class FavoriteAuthorsViewModel {
-    var webServices: WebServices
+    var webServices: WebServicesContract
     var favoriteAuthors = [Author]()
     
-    init(webServices: WebServices = WebServices()) {
+    init(webServices: WebServicesContract = WebServices()) {
         self.webServices = webServices
     }
     

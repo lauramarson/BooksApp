@@ -43,6 +43,7 @@ class HomeViewController: UIViewController, UpdateScrollViewProtocol, ShowAlertP
         
         authorsView.layer.cornerRadius = 40
         authorsView.layer.maskedCorners = [.layerMinXMinYCorner]
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

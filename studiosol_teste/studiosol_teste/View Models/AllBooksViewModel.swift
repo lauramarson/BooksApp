@@ -8,10 +8,10 @@
 import Foundation
 
 class AllBooksViewModel {
-    var webServices: WebServices
+    var webServices: WebServicesContract
     var allBooks = [Book]()
     
-    init(webServices: WebServices = WebServices()) {
+    init(webServices: WebServicesContract = WebServices()) {
         self.webServices = webServices
     }
     

@@ -8,10 +8,10 @@
 import Foundation
 
 class DetailBookViewModel {
-    var webServices: WebServices
+    var webServices: WebServicesContract
     var book: Book
 
-    init(webServices: WebServices = WebServices(), book: Book) {
+    init(webServices: WebServicesContract = WebServices(), book: Book) {
 
         self.webServices = webServices
         self.book = book

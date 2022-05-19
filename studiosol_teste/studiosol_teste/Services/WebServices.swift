@@ -10,6 +10,9 @@ import Apollo
 
 protocol WebServicesContract: AnyObject {
     func loadFavoriteBooks(completion: @escaping ([FavoriteBooksQuery.Data.FavoriteBook]?, String?) -> ())
+    func loadAllBooks(completion: @escaping ([AllBooksQuery.Data.AllBook]?, String?) -> ())
+    func loadFavoriteAuthors(completion: @escaping ([FavoriteAuthorsQuery.Data.FavoriteAuthor]?, String?) -> ())
+    func loadBookDetails(id: String, completion: @escaping (BookDetailsQuery.Data.Book) -> ())
 }
 
 class WebServices: WebServicesContract {
