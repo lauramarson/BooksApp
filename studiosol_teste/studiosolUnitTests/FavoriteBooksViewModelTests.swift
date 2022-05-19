@@ -24,7 +24,7 @@ class FavoriteBooksViewModelTests: XCTestCase {
         
         viewModel.getFavoriteBooks { _ in }
         
-        XCTAssertEqual(viewModel.numberOfItems(), successWebService.loadedFavoriteBooks.count)
+        XCTAssertEqual(viewModel.numberOfItems, successWebService.loadedFavoriteBooks.count)
     }
     
     func testIfReturnedModelIsCorrect() throws {

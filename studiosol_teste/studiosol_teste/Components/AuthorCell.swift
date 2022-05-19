@@ -8,9 +8,9 @@
 import UIKit
 
 class AuthorCell: UICollectionViewCell {
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var booksCountLabel: UILabel!
+    @IBOutlet private var imageView: UIImageView!
+    @IBOutlet private var nameLabel: UILabel!
+    @IBOutlet private var booksCountLabel: UILabel!
     
     var authorCellVM: AuthorCellViewModel?
     

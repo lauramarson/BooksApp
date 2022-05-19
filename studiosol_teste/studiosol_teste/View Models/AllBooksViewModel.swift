@@ -11,20 +11,18 @@ class AllBooksViewModel {
     var webServices: WebServicesContract
     var allBooks = [Book]()
     
+    var numberOfRows: Int { allBooks.count }
+    
     init(webServices: WebServicesContract = WebServices()) {
         self.webServices = webServices
     }
     
-    func numberOfRows(_ section: Int) -> Int {
-        return allBooks.count
-    }
-    
     func modelAt(_ index: Int) -> Book {
-        return allBooks[index]
+        allBooks[index]
     }
     
     func getAllBooks(completion: @escaping (String?) -> ()) {
-        webServices.loadAllBooks() { [weak self] (books, error) in
+        webServices.loadAllBooks() { [weak self] books, error in
             if let books = books {
                 self?.allBooks = books.map { Book(book: $0) }
                 completion(nil)

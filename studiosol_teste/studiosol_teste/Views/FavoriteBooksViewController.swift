@@ -11,9 +11,9 @@ import SDWebImage
 class FavoriteBooksViewController: UIViewController {
     private let reuseIdentifier = "FavoriteBook"
     
-    var booksCollectionVM = FavoriteBooksViewModel()
+    private var booksCollectionVM = FavoriteBooksViewModel()
     
-    @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet private var collectionView: UICollectionView!
     
     weak var delegate: ShowAlertProtocol?
     
@@ -23,6 +23,10 @@ class FavoriteBooksViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        getFavoriteBooks()
+    }
+    
+    private func getFavoriteBooks() {
         booksCollectionVM.getFavoriteBooks { [weak self] (error) in
             if let error = error {
                 guard let alert = self?.fetchAlert(title: "Erro ao carregar livros favoritos", message: error) else {return}
@@ -30,7 +34,6 @@ class FavoriteBooksViewController: UIViewController {
             } else {
                 self?.collectionView.reloadData()
             }
-            
         }
     }
 }
@@ -38,7 +41,7 @@ class FavoriteBooksViewController: UIViewController {
 extension FavoriteBooksViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return booksCollectionVM.numberOfItems()
+        return booksCollectionVM.numberOfItems
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

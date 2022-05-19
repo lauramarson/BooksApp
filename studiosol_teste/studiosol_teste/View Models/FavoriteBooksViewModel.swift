@@ -9,19 +9,16 @@ import Foundation
 
 class FavoriteBooksViewModel {
     var webServices: WebServicesContract
-//    var favoriteBooks = [FavoriteBooksQuery.Data.FavoriteBook]()
     var favoriteBooks = [Book]()
     
     init(webServices: WebServicesContract = WebServices()) {
         self.webServices = webServices
     }
     
-    func numberOfItems() -> Int {
-        return favoriteBooks.count
-    }
+    var numberOfItems: Int { favoriteBooks.count }
     
     func modelAt(_ index: Int) -> Book {
-        return favoriteBooks[index]
+        favoriteBooks[index]
     }
     
     func getFavoriteBooks(completion: @escaping (String?) -> ()) {

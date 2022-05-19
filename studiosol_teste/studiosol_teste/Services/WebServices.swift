@@ -42,9 +42,7 @@ class WebServices: WebServicesContract {
         }
       }
     }
-}
 
-extension WebServices {
     func loadBookDetails(id: String, completion: @escaping (BookDetailsQuery.Data.Book) -> ()) {
         
       Network.shared.apollo.fetch(query: BookDetailsQuery(bookID: id)) { result in
@@ -66,9 +64,6 @@ extension WebServices {
         }
       }
     }
-}
-
-extension WebServices {
     
     func loadFavoriteAuthors(completion: @escaping ([FavoriteAuthorsQuery.Data.FavoriteAuthor]?, String?) -> ()) {
       Network.shared.apollo
@@ -95,9 +90,6 @@ extension WebServices {
         }
       }
     }
-}
-
-extension WebServices {
     
     func loadAllBooks(completion: @escaping ([AllBooksQuery.Data.AllBook]?, String?) -> ()) {
       Network.shared.apollo
@@ -124,9 +116,7 @@ extension WebServices {
         }
       }
     }
-}
 
-extension WebServices {
     func loadUserPicture(completion: @escaping (String) -> ()) {
         
       Network.shared.apollo.fetch(query: UserPictureQuery()) { result in

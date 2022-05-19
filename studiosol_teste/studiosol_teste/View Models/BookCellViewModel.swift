@@ -20,5 +20,5 @@ struct BookCellViewModel {
     
     var author: String { book.author }
     
-    var imageURL: URL { URL(string: book.cover)! }
+    var imageURL: URL? { URL(string: book.cover) }
 }

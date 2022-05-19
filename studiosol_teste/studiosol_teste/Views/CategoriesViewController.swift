@@ -8,15 +8,7 @@
 import UIKit
 
 class CategoriesViewController: UIViewController {
-    @IBOutlet var collectionView: UICollectionView!
-    
-//    @IBOutlet var collectionLayout: UICollectionViewFlowLayout! {
-//        didSet {
-//            collectionLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-//        }
-//    }
-    
-    
+    @IBOutlet private var collectionView: UICollectionView!
     
     private let reuseIdentifier = "Category"
     
@@ -56,7 +48,7 @@ extension CategoriesViewController: UICollectionViewDataSource {
 extension CategoriesViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //
+        
     }
 }
 

@@ -8,7 +8,7 @@
 import Foundation
 
 class AuthorCellViewModel {
-    var author: Author
+    private let author: Author
     
     init(_ author: Author) {
         self.author = author

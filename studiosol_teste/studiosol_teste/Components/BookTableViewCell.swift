@@ -9,15 +9,14 @@ import UIKit
 import SDWebImage
 
 class BookTableViewCell: UITableViewCell {
-    @IBOutlet var coverImage: UIImageView!
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var authorLabel: UILabel!
+    @IBOutlet private var coverImage: UIImageView!
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var authorLabel: UILabel!
     
     var bookCellVM: BookCellViewModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     func configure() {

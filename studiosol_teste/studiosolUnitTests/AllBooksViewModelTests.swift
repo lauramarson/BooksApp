@@ -24,7 +24,7 @@ class AllBooksViewModelTests: XCTestCase {
         
         viewModel.getAllBooks { _ in }
         
-        XCTAssertEqual(viewModel.numberOfRows(1), successWebService.loadedAllBooks.count)
+        XCTAssertEqual(viewModel.numberOfRows, successWebService.loadedAllBooks.count)
     }
     
     func testIfReturnedModelIsCorrect() throws {

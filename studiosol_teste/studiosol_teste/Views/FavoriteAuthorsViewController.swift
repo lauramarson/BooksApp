@@ -8,11 +8,11 @@
 import UIKit
 
 class FavoriteAuthorsViewController: UIViewController {
-    @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet private var collectionView: UICollectionView!
 
     private let reuseIdentifier = "Author"
     
-    var favoriteAuthorsVM = FavoriteAuthorsViewModel()
+    private let favoriteAuthorsVM = FavoriteAuthorsViewModel()
     
     weak var delegate: ShowAlertProtocol?
 
@@ -22,6 +22,10 @@ class FavoriteAuthorsViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        getFavoriteAuthors()
+    }
+    
+    private func getFavoriteAuthors() {
         favoriteAuthorsVM.getFavoriteAuthors { [weak self] (error) in
             if let error = error {
                 guard let alert = self?.fetchAlert(title: "Erro ao carregar autores favoritos", message: error) else {return}
@@ -36,7 +40,7 @@ class FavoriteAuthorsViewController: UIViewController {
 extension FavoriteAuthorsViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return favoriteAuthorsVM.numberOfItems(section)
+        return favoriteAuthorsVM.numberOfItems
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -58,6 +62,6 @@ extension FavoriteAuthorsViewController: UICollectionViewDataSource {
 extension FavoriteAuthorsViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //
+        
     }
 }

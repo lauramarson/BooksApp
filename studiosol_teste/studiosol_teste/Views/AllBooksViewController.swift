@@ -13,12 +13,12 @@ protocol UpdateScrollViewProtocol: AnyObject {
 
 class AllBooksViewController: UIViewController {
     
-    @IBOutlet var tableView: UITableView!
-    @IBOutlet var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet private var tableView: UITableView!
+    @IBOutlet private var tableViewHeight: NSLayoutConstraint!
     
     weak var heightDelegate: UpdateScrollViewProtocol?
     weak var alertDelegate: ShowAlertProtocol?
-    var allBooksVM = AllBooksViewModel()
+    private let allBooksVM = AllBooksViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,10 @@ class AllBooksViewController: UIViewController {
         
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
+        getAllBooks()
+    }
+    
+    private func getAllBooks() {
         allBooksVM.getAllBooks { [weak self] (error) in
             if let error = error {
                 guard let alert = self?.fetchAlert(title: "Erro ao carregar lista de livros", message: error) else {return}
@@ -42,12 +46,13 @@ class AllBooksViewController: UIViewController {
             }
         }
     }
+    
 }
 
 extension AllBooksViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allBooksVM.numberOfRows(section)
+        return allBooksVM.numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

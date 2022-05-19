@@ -8,31 +8,32 @@
 import UIKit
 import SDWebImage
 
-class HomeViewController: UIViewController, UpdateScrollViewProtocol, ShowAlertProtocol {
+class HomeViewController: UIViewController {
     
-    @IBOutlet var tableViewContainerHeight: NSLayoutConstraint!
+    @IBOutlet private var tableViewContainerHeight: NSLayoutConstraint!
     
-    @IBOutlet var userPicture: UIImageView!
+    @IBOutlet private var userPicture: UIImageView!
     
-    @IBOutlet var headerView: UIView!
+    @IBOutlet private var headerView: UIView!
     
-    @IBOutlet var authorsView: UIView!
+    @IBOutlet private var authorsView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupView()
-        
+        loadUserPicture()
+    }
+    
+    private func loadUserPicture() {
         WebServices().loadUserPicture() { [weak self] (picture) in
             let imageURL = URL(string: picture)
             let placeholderImage = UIImage(named: "imagePlaceholder")
             
             self?.userPicture.sd_setImage(with: imageURL, placeholderImage: placeholderImage)
         }
-
     }
     
-    func setupView() {
+    private func setupView() {
         headerView.layer.shadowOffset = CGSize(width: 0,
                                           height: 1)
         headerView.layer.shadowRadius = 1
@@ -60,14 +61,20 @@ class HomeViewController: UIViewController, UpdateScrollViewProtocol, ShowAlertP
             favoriteAuthorsVC.delegate = self
         }
     }
+}
+
+extension HomeViewController: UpdateScrollViewProtocol {
     
     func updateHeight(height: CGFloat) {
         tableViewContainerHeight.constant = height
     }
     
+}
+
+extension HomeViewController: ShowAlertProtocol {
+    
     func alert(_ alert: UIAlertController) {
         present(alert, animated: true)
     }
-
+    
 }
-

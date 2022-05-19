@@ -11,20 +11,18 @@ class FavoriteAuthorsViewModel {
     var webServices: WebServicesContract
     var favoriteAuthors = [Author]()
     
+    var numberOfItems: Int { favoriteAuthors.count }
+    
     init(webServices: WebServicesContract = WebServices()) {
         self.webServices = webServices
     }
     
-    func numberOfItems(_ section: Int) -> Int {
-        return favoriteAuthors.count
-    }
-    
     func modelAt(_ index: Int) -> Author {
-        return favoriteAuthors[index]
+        favoriteAuthors[index]
     }
     
     func getFavoriteAuthors(completion: @escaping (String?) -> ()) {
-        webServices.loadFavoriteAuthors() { [weak self] (authors, error) in
+        webServices.loadFavoriteAuthors() { [weak self] authors, error in
             if let authors = authors {
                 self?.favoriteAuthors = authors.map { Author(author: $0) }
                 completion(nil)

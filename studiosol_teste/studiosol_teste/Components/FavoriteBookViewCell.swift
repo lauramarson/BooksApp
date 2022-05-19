@@ -8,9 +8,9 @@
 import UIKit
 
 class FavoriteBookViewCell: UICollectionViewCell {
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var authorLabel: UILabel!
+    @IBOutlet private var imageView: UIImageView!
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var authorLabel: UILabel!
     
     var bookCellVM: BookCellViewModel?
     

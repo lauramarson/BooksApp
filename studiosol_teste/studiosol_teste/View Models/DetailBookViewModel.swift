@@ -10,16 +10,7 @@ import Foundation
 class DetailBookViewModel {
     var webServices: WebServicesContract
     var book: Book
-
-    init(webServices: WebServicesContract = WebServices(), book: Book) {
-
-        self.webServices = webServices
-        self.book = book
-    }
-}
-
-extension DetailBookViewModel {
-
+    
     var title: String { book.title }
 
     var author: String { book.author }
@@ -28,16 +19,19 @@ extension DetailBookViewModel {
 
     var description: String { book.description }
 
-    var isFavorite: Bool? { book.isFavorite }
-}
-
-extension DetailBookViewModel {
-
+    var isFavorite: Bool { book.isFavorite ?? false }
+    
+    init(webServices: WebServicesContract = WebServices(), book: Book) {
+        self.webServices = webServices
+        self.book = book
+    }
+    
     func getBookDetails(completion: @escaping () -> ()) {
-        webServices.loadBookDetails(id: book.id) { [weak self] (bookDetails) in
+        webServices.loadBookDetails(id: book.id) { [weak self] bookDetails in
             self?.book.description = bookDetails.description
             self?.book.isFavorite = bookDetails.isFavorite
             completion()
         }
     }
+    
 }
