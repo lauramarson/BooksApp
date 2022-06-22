@@ -7,13 +7,13 @@ Acessar o XCode através do arquivo studiosol_teste.xcworkspace
 ## Principais Tecnologias
 - Swift e UIKit
 - Arquitetura MVVM
-- Testes unitários com cobertura de X%
+- Testes unitários
 - Gerenciador de dependências Cocoapods
 - Apollo para requisições GraphQL
 
 ## Sobre o aplicativo
 
-O aplicativo possui 2 telas principais, sendo uma de Home e outra de detalhes dos filmes, a qual pode ser acessada clicando na seção de Livros Favoritos ou na seção Todos os Livros.
+O aplicativo possui 2 telas principais, sendo uma de Home e outra de detalhes dos livros, a qual pode ser acessada clicando na seção de Livros Favoritos ou na seção Todos os Livros.
 
 1) Tela de Início:
 - Primeira seção é feita a requisição da foto do usuário;
