@@ -1,4 +1,4 @@
-# Studio Sol App
+# Books App
 
 ## Como rodar
 
